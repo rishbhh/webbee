@@ -16,10 +16,11 @@
         padding-right: 4%;
     }
     .left-content h1{
-     font-weight: 100;
+     font-weight: 300;
      line-height: 1.4em;
-     font-family: sans-serif;
-     font-size: 3.2rem;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 3rem;
+     text-transform: uppercase;
     letter-spacing: 1px;
     }
     .left-content p{
@@ -37,15 +38,42 @@
     }
    
 }
+.platform{
+    padding: 5rem 7rem;
+    
+    .plat-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;  
+        overflow: hidden;
+    
+        .section-logo{
+            width: 80vw;
+        }
+    }
+    .wrk{
+        background-image: url(/assets/resources/img/platform-bg.svg);
+        height: 30vh;
+        background-size: contain;
+        width: 18vw;
+        background-repeat: no-repeat;
+        p{
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            padding: 50px 50px;
+            line-height: 37px;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+    }
+}
+
  @media only screen and (max-width:767px){
         .hero-section{
         flex-direction:column;
         height: auto;
     }
     }
-    .wrk{
-        background-image: url('/assets/resources/img/platform-bg.svg');
-        width: 250px;
-    height: 28vh;
-    background-repeat: no-repeat;
-    }
+
