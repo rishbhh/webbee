@@ -7,11 +7,33 @@
 .wrapper{
     margin: auto;  
     width: 100%;
-    max-width: @wrapper-value;
+    // max-width: @wrapper-value;
+}
+.revers{
+    flex-direction: row-reverse;
 }
 
-
-
-body,html{
-
+.main-heading{
+    font-size: 2.3rem;
+    color:black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
 }
+.main-heading:after{
+    content: '';
+    position: absolute;
+    width: 119px;
+    height: 4px;
+    background: #154df1;
+    transform: translate(-185%, 58px);
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }

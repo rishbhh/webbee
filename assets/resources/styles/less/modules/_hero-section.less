@@ -54,18 +54,28 @@
     }
     .wrk{
         background-image: url(/assets/resources/img/platform-bg.svg);
-        height: 30vh;
-        background-size: contain;
-        width: 18vw;
-        background-repeat: no-repeat;
+    height: 20vh;
+    background-size: contain;
+    width: 18vw;
+    background-repeat: no-repeat;
+    padding: 50px 50px;
         p{
             font-size: 1.5rem;
             letter-spacing: 2px;
-            padding: 50px 50px;
             line-height: 37px;
             color: #fff;
             font-weight: 100;
             text-transform: uppercase;
+            
+        }
+        p:before{
+            content: '';
+            width: 3px;
+            height: 100px;
+            background: #fff;
+            transform: translate(-14px, 7px);
+            position: absolute;
+            
         }
     }
 }
