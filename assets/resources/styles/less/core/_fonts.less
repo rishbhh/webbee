@@ -1,0 +1,45 @@
+// Simplfied version to include fonts
+// @font-face {
+//     font-family: 'theano_didotregular';
+//     src: url('@{font-path}/theanodidot-regular-webfont.woff2') format('woff2'),
+//          url('@{font-path}/theanodidot-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+@font_name: geomanist;
+@font_ext:webfont;
+
+// font-variations
+@g__regular:'geomanistregular';
+@g__book:'geomanistbook';
+@g__light:'geomanistlight';
+
+.secondary__font(@weight){
+    font-family: 'geomanist@{weight}'
+}
+
+.font__family(@name,@weight ){
+    font-family: '@{name}';
+    src: url("@{font-path}/@{font_name}-@{weight}-@{font_ext}.eot");
+    src: url('@{font-path}/@{font_name}-@{weight}-@{font_ext}.eot?#iefix') format('embedded-opentype'),
+         url('@{font-path}/@{font_name}-@{weight}-@{font_ext}.woff2') format('woff2'),
+         url('@{font-path}/@{font_name}-@{weight}-@{font_ext}.woff') format('woff'),
+         url('@{font-path}/@{font_name}-@{weight}-@{font_ext}.ttf') format('truetype'),
+         url('@{font-path}/@{font_name}-@{weight}-@{font_ext}.svg#@{name}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    .font__family(geomanistregular,regular);
+}
+
+@font-face {
+    .font__family(geomanistbook,book);
+}
+
+@font-face {
+    .font__family(geomanistlight,light);
+}

@@ -1,0 +1,349 @@
+.font_primary(@size: @primary_font-size,@family: @primary_font){
+  font-family: @family;
+  font-size: @size;
+}
+.font_secondary(@size: @secondary_font-size,@family:@secondary_font){
+  font-family: @family;
+  font-size: @size;
+}
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+};
+//padding bottom mixin
+
+.aspect-ratio(@width, @height) {
+  position: relative;
+  width: ~"@{width}px";
+  padding-top: (@height / @width) * 100%;     
+  height: 0;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all .5s ease;                      
+    }
+}
+.notransition() {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+};
+
+.noanimation() {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  animation: none !important;
+};
+.hide-text() {
+  font: ~"0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-hide() {
+  .hide-text();
+}
+
+.text_uppercase(){
+    text-transform: uppercase;
+}
+
+.float(@position: left){
+  float: @position;
+};
+
+.float_r{
+    float:right;
+}
+.float_l{
+    float:left;
+}
+
+.width(@value: 100%){
+  width:@value;
+};
+
+.height(@value: 100%){
+  height:@value;
+};
+
+.position(@value:relative){
+  position: @value;
+};
+
+.text_align(@value: center){
+  text-align: @value
+}
+
+// Calculation for letter spacing given in photoshop
+//X / 1000 = Y
+//X is the value of the letter-tracking in Photoshop
+//Y is the value in "em" to use in CSS
+
+
+.grid_center(){
+    max-width: @layout_width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid_center_w(@value){
+    max-width: @value;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letter_spacing_ph(@spacing){
+letter-spacing: unit(@spacing / 1000, em);
+text-indent:  unit(@spacing / 1000, em);
+};
+
+.letter_only_spacing(@spacing){
+letter-spacing: unit(@spacing / 1000, em);
+};
+
+.wh(@width, @height){
+    width: @width;
+    height: @height;
+};
+
+
+.mr(@value){
+    margin-right: @value;
+}
+// For background size calculation
+//x part     1000px / 80px = 12.5   ->> 1250%
+//y part      500px / 80px = 6.25   ->>  625%
+
+
+//background-size: 1250% 625%;
+
+// For background position calculation
+//x-part     173px / 1000px = 0.173   ->> 17.3%
+//y part     293px / 500px = 0.586    ->> 58.6%
+
+//background-position: 17.3% 58.6%;
+
+
+
+.img-responsive(@display: block) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+.t_upcase(@value : uppercase){
+  text-transform: @value;
+}
+
+
+.inline-100(){
+    display: inline-block;
+    width: 100%;
+}
+
+.inline-block(){
+    display: inline-block;
+};
+
+.block(){
+    display:block;
+};
+
+.inline(){
+    display:inline;
+};
+
+.absolute-center(){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+};
+
+.absolute-100(){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+};
+
+
+
+*:focus {
+    outline: none;
+}
+
+
+
+::-webkit-input-placeholder {
+   color: fade(@black, @placeholder-opacity);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: fade(@black, @placeholder-opacity);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: fade(@black, @placeholder-opacity);
+}
+
+:-ms-input-placeholder {
+   color: fade(@black, @placeholder-opacity);
+}
+
+
+
+.ab-wh(@width: 100%, @height : 100%){
+    position: absolute;
+    width: @width;
+    height: @height;
+};
+
+.img-block(){
+    display: block;
+    width: 100%;
+};
+
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+
+
+@keyframes animate {
+  0%{transform:translateY(5px);}
+  100%{transform:translateY(-5px);}
+}
+
+
+.border-radius (@radius: 50%) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+
+
+.transform(@x: 0px, @y: 0px, @deg: 0){
+     -webkit-transform: translate(@x, @y) rotate(@deg);
+    -moz-transform: translate(@x, @y) rotate(@deg);
+    -ms-transform: translate(@x, @y) rotate(@deg);
+    -o-transform: translate(@x, @y) rotate(@deg);
+    transform: translate(@x, @y) rotate(@deg);
+};
+
+.transform_scale(@value: 0){
+     -webkit-transform: scale(@value);
+    -moz-transform: scale(@value);
+    -ms-transform: scale(@value);
+    -o-transform: scale(@value);
+    transform: scale(@value);
+};
+
+.middle() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.horizontal-middle(){
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.vertical-middle(){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+.cursor(@value : pointer){
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: @value;
+    cursor: -moz-@value;
+    cursor: -webkit-@value;
+}
+
+
+.hr() {
+    color: @accent-color;
+    background: @accent-color;
+    border: none;
+    height: 1px;
+}
+
+
+
+.cal-height(@value : 350px){
+    height: calc(~"100vh - @{value}");
+    height: -moz-calc(~"100vh - @{value}");
+    height: -webkit-calc(~"100vh - @{value}");
+}
+
+.cal-width(@max-value: 100%, @value : 350px){
+    width: calc(~"@{max-value} - @{value}");
+    width: -moz-calc(~"@{max-value} - @{value}");
+    width: -webkit-calc(~"@{max-value} - @{value}");
+}
+
+.sprite_cal(@x: 0, @y: 0, @width, @height ){
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+// mixin to add top left
+.sprite-cal-al(@t, @l, @x: 0, @y: 0, @width, @height ){
+    top: @t;
+    left: @l;
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+
+// Mixin for keyframe animation
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}

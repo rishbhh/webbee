@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Path_4937-2_1_);}
+	.st1{opacity:0.1;}
+	.st2{fill:#FFFFFF;}
+	.st3{opacity:0.1;fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;enable-background:new    ;}
+	.st4{opacity:0.2;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g>
+	<g transform="matrix(1, 0, 0, 1, 0, 0)">
+		
+			<linearGradient id="Path_4937-2_1_" gradientUnits="userSpaceOnUse" x1="-807.8134" y1="1081.9133" x2="-807.8134" y2="1080.9133" gradientTransform="matrix(300 0 0 -300 242494 324574)">
+			<stop  offset="0" style="stop-color:#062684"/>
+			<stop  offset="1" style="stop-color:#3054D4"/>
+		</linearGradient>
+		<path id="Path_4937-2" class="st0" d="M50,0h200c27.6,0,50,22.4,50,50v200c0,27.6-22.4,50-50,50l0,0H50c-27.6,0-50-22.4-50-50l0,0
+			V50C0,22.4,22.4,0,50,0z"/>
+	</g>
+	<g id="Group_1675" transform="translate(719.534 92.863)" class="st1">
+		<g id="Group_1672" transform="translate(-511.534 19.283)">
+			<path id="Path_4919" class="st2" d="M52.8,33.3L15.7-3.8l-37.1,37.1L-39,15.7L15.7-39l54.7,54.7L52.8,33.3z"/>
+		</g>
+		<g id="Group_1673" transform="translate(-511.534 85.556)">
+			<path id="Path_4920" class="st2" d="M52.8,33.3L15.7-3.8l-37.1,37.1L-39,15.7L15.7-39l54.7,54.7L52.8,33.3z"/>
+		</g>
+		<g id="Group_1674" transform="translate(-511.534 151.827)">
+			<path id="Path_4921" class="st2" d="M52.8,33.3L15.7-3.8l-37.1,37.1L-39,15.7L15.7-39l54.7,54.7L52.8,33.3z"/>
+		</g>
+	</g>
+	<g id="Group_1677" transform="translate(799.526 241.3) rotate(45)">
+		<path id="Path_4923" class="st3" d="M-546.3,558.5v-20h20v-20h20"/>
+		<path id="Path_4924" class="st3" d="M-498.2,538.7v-20h20v-20h20"/>
+	</g>
+	<g id="Group_1942" transform="translate(430.243 -584.857) rotate(-45)" class="st4">
+		<circle id="Ellipse_329" class="st5" cx="-724.4" cy="174.9" r="15.6"/>
+		<circle id="Ellipse_330" class="st5" cx="-711.7" cy="174.9" r="15.6"/>
+	</g>
+</g>
+</svg>
