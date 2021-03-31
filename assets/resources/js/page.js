@@ -39,3 +39,7 @@ jQuery(document).ready(function ($) {
     });
 
 });
+
+const tl = gsap.timeline();
+tl.from(".box", { duration: 1, y: 100, opacity: 0 })
+tl.to(".box", { duration: 1, y: 0, opacity: 1 })
