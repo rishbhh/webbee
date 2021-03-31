@@ -1,0 +1,138 @@
+
+.clients-slider{
+    padding: 11% 0;
+    .slick-prev, .slick-next{
+        display: none !important;
+    }
+    .main-heading:after {
+        transform: translate(-339%, 58px);
+    }
+}
+/* slider styles */
+.sd_master_wrapper{
+	position: relative;	
+	max-width:100%;
+	margin:0 auto;
+	padding:0;
+	border-radius:10px;
+    margin-top: 10%;
+}
+
+
+.sd_scroll {
+	height: auto;
+    overflow: auto;
+}
+	
+.slideshow {
+    position: relative;
+    min-height: 300px;
+    height: auto;
+	z-index:3;
+}
+button.slick-prev.slick-arrow {
+    position: absolute;
+    z-index: 9999;
+    bottom: -80px;
+    right: 160px;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 15px;
+    width: 30px;
+    padding: 0;
+    background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
+    background-size: 100% 100%;
+}
+button.slick-next.slick-arrow {
+    position: absolute;
+    bottom: -82px;
+    right: 105px;
+    background: transparent;
+    color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    height: 18px;
+    width: 40px;
+    background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
+    background-size: 100% 100%;
+}
+.pagingInfo {
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+}
+.sdCustomSliderHeadig {
+    color: #272727;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.6em;
+    text-align: left;
+    font-style: italic;
+    margin: 0;
+}
+.sdCustomSliderBtn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: montserrat;
+    background: #E31C3A;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 30px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.sdAllContent{
+	margin:auto;
+    padding: 0px 43px;
+}
+.thumbnail img {
+    
+    margin-top: 15px;
+}
+.content{
+	display: flex!important;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.SdClientName {
+    text-align: left;
+    color: #154df1;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-top: 4%;
+    margin-bottom: 10px;
+}
+.SdClientDesc {
+    text-align: left;
+    color: #7d7d7d;
+    font-size: 16px;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+
+/* style for moblile */
+@media (max-width:576px){
+.sd_scroll {
+    height: auto;
+    overflow: auto;
+	max-height:240px;
+}
+
+.thumbnail, .btnNtxt{
+	width: 100% !important;
+    display: block !important;
+}
+
+}

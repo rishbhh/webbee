@@ -1,20 +1,19 @@
-
-
 $(document).ready(function () {
     $('.customer-logos').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1500,
-        arrows: true,
+        arrows: false,
         dots: false,
         pauseOnHover: false,
-        prevArrow: '<i class="slick-prev fas fa-angle-left"></i>',
-        nextArrow: '<i class="slick-next fas fa-angle-right"></i>',
         responsive: [{
             breakpoint: 768,
+            slidesToShow: 2,
+            slidesToScroll: 1,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
         }, {
             breakpoint: 520,
@@ -23,4 +22,20 @@ $(document).ready(function () {
             }
         }]
     });
+});
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 120) {
+        $('header').addClass('fixed').fadeIn;
+    } else {
+        $('header').removeClass('fixed');
+    }
+});
+jQuery(document).ready(function ($) {
+    var $slickElement = $('.slideshow');
+
+    $slickElement.slick({
+        autoplay: true,
+        dots: false,
+    });
+
 });
