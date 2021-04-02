@@ -407,17 +407,19 @@ header .enquire {
 }
 .hero-section .left-content h1 {
   font-weight: 300;
-  line-height: 1.4em;
+  line-height: 1.3em;
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 .hero-section .left-content p {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 1.5em;
   margin-bottom: 70px;
+  font-weight: 500;
+  padding-right: 20px;
 }
 .hero-section .right-image {
   align-items: center;
@@ -946,45 +948,144 @@ button.slick-next.slick-arrow {
     display: block !important;
   }
 }
-.case-study {
-  padding: 10% 0;
+.cases-cards {
+  margin-bottom: 145px;
+  margin-top: 120px;
 }
-.case-study .main-heading:after {
-  transform: translate(-160%, 58px);
-}
-.case-study .flex-grid-thirds {
+.cases-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
-.case-study .flex-grid-thirds .col {
-  width: 32%;
-  padding: 0 10px;
+.viewport-section {
+  visibility: hidden;
+  animation-name: none;
+  animation-duration: 0.4s;
 }
-.case-study .flex-grid-thirds .col h5 {
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+.viewport-section.in-viewport {
+  animation-name: slide-in-up;
+  visibility: visible;
 }
-.case-study .flex-grid-thirds .col p {
-  font-size: 16px;
-  letter-spacing: 1px;
-  line-height: 1.8rem;
-  font-weight: 500;
+.text-col {
+  line-height: 1.573;
+  flex-shrink: 0;
+  position: relative;
 }
-.case-study .flex-grid-thirds .col .btn-more {
-  background-color: transparent;
-  padding: 3px 0px;
-  border-radius: 0px;
-  border: none;
-  color: #00299e;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.cases-row .text-col {
+  width: 100%;
+  margin-bottom: 60px;
 }
-.case-study .flex-grid-thirds .col .brand-color-hover:hover {
-  color: #4200FF;
+.cases-row .text-col {
+  flex: 1;
+  padding: 0 3.5%;
+  margin-bottom: 0;
+}
+.cases-row .text-block {
+  max-width: 420px;
+}
+.cases-row .h1,
+.cases-row .h2 {
+  font-weight: 400;
+}
+.cases-cards .h1 {
+  margin-bottom: 22px;
+}
+.h1 {
+  font-size: 48px;
+}
+.blue {
+  color: #3f60fa;
+}
+.cases-row .text-col p {
+  margin-bottom: 40px;
+}
+.cases-col {
+  width: 100%;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cases-col {
+  width: 50%;
+  padding: 0 25px;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cases-col {
+  width: 34.5%;
+  padding: 0 3.5%;
+  padding-left: calc((100% - 80px) * 3.5/100);
+  padding-right: calc((100% - 80px) * 3.5/100);
+  margin-bottom: 0;
+  padding-left: calc((100% - 120px) * 3.5/100);
+  padding-right: calc((100% - 120px) * 3.5/100);
+}
+.card-holder {
+  display: block;
+  margin-right: 90px;
+  position: relative;
+  height: 0;
+  padding-bottom: 73.5%;
+}
+.card-wrap,
+.card-wrap:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card-wrap {
+  z-index: 3;
+  transform: translate3D(0, 0, 0);
+}
+.card-holder .card,
+.card-holder .case-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.cases-col .card {
+  max-width: 100%;
+}
+.card {
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 20px #000000;
+  background-color: #fff;
+  color: #252525;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  flex-shrink: 0;
+  padding: 30px;
+}
+.case-card {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-holder .card,
+.card-holder .case-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 .talk-message-box {
   max-width: 785px;
