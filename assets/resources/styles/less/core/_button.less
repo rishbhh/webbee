@@ -59,3 +59,42 @@ border-radius:@border-radius-5;
     width: 15px;
     margin-left: 10px;
 }
+.submit_button {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-indent: 0.44em;
+    border: none;
+    background: #1a40ff;
+    /* height: 55px; */
+    padding: 10px 30px;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: -8px;
+    z-index: 0;
+}
+.submit_button:after {
+    content: "";
+    background-color: rgba(26, 64, 255, 0.47);
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: -1;
+}
+.submit_button:hover {
+    animation: btn_anim 1.2s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.submit_button:hover:after {
+    top: 0;
+    left: 0;
+}
