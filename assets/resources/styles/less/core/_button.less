@@ -12,7 +12,7 @@
     , #3054D4, #182A6A);
 
 .button-blue{
-padding:15px 30px;
+padding:10px 30px;
 background: @brand-blue;
 color: @white;
 border-radius:@border-radius-5;
@@ -21,7 +21,7 @@ border-radius:@border-radius-5;
 .btn-1{
     background:@button-g;
     text-transform: uppercase;
-    padding: 15px 25px;
+    padding: 10px 25px;
     text-decoration: none;
     color: @white;
     border-radius: @border-radius-5;
@@ -97,4 +97,64 @@ border-radius:@border-radius-5;
 .submit_button:hover:after {
     top: 0;
     left: 0;
+}
+.read-more{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #1233FF;
+    cursor: pointer;
+    position: relative;
+}
+.read-more::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1233FF;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+.read-more:hover::after{
+    width: 100%;
+}
+.cta {
+    position: relative;
+    padding: 8px 17px 8px 12px;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    font-size: 16px !important;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.cta svg {
+position: relative;
+left: 5px;
+width: 15px;
+fill: rgb(0, 0, 0);
+
+}
+.cta .btn-background {
+position: absolute;
+top: 0;
+left: 64px;
+right: 0;
+height: 100%;
+background-color: #6BBEF9;
+z-index: -1;
+-webkit-transition: left .2s ease-in-out;
+transition: left .2s ease-in-out;
+}
+.cta:hover {
+color: #fff;
+}
+.cta:hover svg{
+fill: #fff;
+}
+.cta:hover .btn-background {
+left: 0;
 }
