@@ -340,6 +340,9 @@ header {
   padding: 0 3%;
   transition: height 0.5s ease-in;
 }
+header .navs {
+  margin: 0;
+}
 header nav {
   display: flex;
   justify-content: space-between;
@@ -352,6 +355,8 @@ header nav {
 header nav h1 {
   width: 16%;
   margin-left: 16px;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
 header nav ul li {
   display: inline-block;
@@ -1663,6 +1668,9 @@ button.slick-next.slick-arrow {
     max-width: 100%;
     padding: 28px 30px;
     text-align: center;
+  }
+  .message-icon img {
+    vertical-align: middle;
   }
   .talk-message-box-content .heading {
     max-width: 100%;
