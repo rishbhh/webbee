@@ -14,7 +14,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 80px;
     padding: 0 1px;
     background: #fff;
     box-shadow: 1px 1px 12px #cedaffa6;
@@ -223,6 +223,17 @@ ul {
     }
     
 @media(max-width:700px){
+  padding: 0;
+    transition: height 0.5s ease-in;
+    /* height: 100vh; */
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    top: 0;
+   
+  .fixed nav{
+    padding: 0 10px;
+  }
   .hamburger-menu, .right-cta{
       display: block;
   }
@@ -232,10 +243,14 @@ ul {
   nav{
       display: flex;
       text-align: center;
+      padding: 0 10px;
   }
   nav ul li{
       display: block;
       padding: 10px 0;
+      margin-right: 0;
+      text-align: left;
+      color: #000;
   }
   nav ul{
       display: none;
@@ -267,7 +282,7 @@ ul {
       display: flex;
       align-items: center;
       position: fixed;
-      top: 20px;
+      top: 27px;
       left: 20px;
     
       width: 26px;
@@ -305,33 +320,24 @@ ul {
       visibility: hidden;
       top: 0;
       left: -100%;
-    
       width: 300px;
       height: 100%;
-    
       margin: 0;
       padding: 80px 0;
-    
       list-style: none;
-    
-      background-color: #ECEFF1;
+      background-color: #ffffff;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    
+      overflow: auto;
       transition-duration: .25s;
     }
     
     .menu__item {
       display: block;
-      padding: 12px 24px;
-    
-      color: #333;
-    
-      font-family: 'Roboto', sans-serif;
-      font-size: 20px;
+      padding: 12px 17px;
+      color: #000;
+      font-size: 15px;
       font-weight: 600;
-    
       text-decoration: none;
-    
       transition-duration: .25s;
     }
     .menu__item:hover {
@@ -341,11 +347,121 @@ ul {
           font-size: 10px;
           font-weight: 400;
           letter-spacing: 1px;
-          margin-left: 50px;
+          margin-left: 30px;
           padding: 11px 20px;
       }
      
 }
+
+}
+
+.collapse-item .sub-nav, .sub-item{
+  display:block !important;
+}
+.collapse-item{
+  display: none;
+  width: 96%;
+  ul{
+    padding: 0 10px;
+  }
+  ul li{
+    padding: 0px 0;
+  }
+  ul li h3{
+    font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+}
+
+.collapse svg{
+  transition: .3s ease;
+  float: right;
+  margin: 0px 15px;
+  width: 10px;
+}
+
+.collapse span{
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+.active svg{
+  transform: rotate(45deg);
+}
+
+.collapse:nth-of-type(odd) path{
+  fill: #000000;
+}
+
+.collapse:nth-of-type(even) path{
+  fill: #21c3a2;
+}
+.collapse:last-of-type .active .collapse span{
+  color: #3054D4;
+}
+.collapse .collapse-header{
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.collapse:first-of-type .collapse-header{
+  border-radius: 5px 5px 0px 0px ;
+}
+
+.collapse:last-of-type .collapse-header{
+  border-radius: 0px 0px 5px 5px;
+}
+
+.collapse:last-of-type .active{
+  border-radius: 0px !important;
+  background-color: rgba(136,136,136,.05);
+  color: #3054D4 !important;
+}
+
+
+.collapse:last-of-type .active+.collapse-item a:last-of-type {
+  border-radius: 0px 0px 5px 0px;
+}
+
+.collapse:nth-of-type(odd) .collapse-header{
+
+  color: #000000;
+}
+
+.collapse:nth-of-type(even) .collapse-header{
+  background: #ffffff;
+  color: #21c3a2;
+}
+.collapse:last-of-type .collapse-header{
+  position: relative;
+}
+.collapse:last-of-type  .active::after{
+content: "";
+display: block;
+position: absolute;
+height: 100%;
+width: 2px;
+left: 0;
+top: 0;
+opacity: 1;
+background: #3054D4 ;
+}
+.collapse a{
+  display: block;
+    padding: 10px;
+    font-size: 13px;
+    color: #848484;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.collapse a:hover{
+  padding-left: 20px;
+  color: #21c3a2;
 }
 @media @s_desktop{
   header nav ul li a{

@@ -32,3 +32,28 @@
     background-size: cover;
 
 }
+
+@media @m_screen{
+    .about-bee{
+        .solution {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10%;
+        }
+        .right-img{
+            margin: 20px 0; 
+        }
+    }
+    .about-bee:before{
+        display: none;
+    }
+    .about-bee .about-box{
+        box-shadow: none;
+    }
+    .content-left h2 {
+        font-size: 1.7rem !important;
+        line-height: 2.4rem !important;
+    }
+}

@@ -330,7 +330,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 100px;
+  height: 80px;
   padding: 0 1px;
   background: #fff;
   box-shadow: 1px 1px 12px #cedaffa6;
@@ -522,6 +522,18 @@ header .enquire {
   letter-spacing: 1px;
 }
 @media (max-width: 700px) {
+  header {
+    padding: 0;
+    transition: height 0.5s ease-in;
+    /* height: 100vh; */
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    top: 0;
+  }
+  header .fixed nav {
+    padding: 0 10px;
+  }
   header .hamburger-menu,
   header .right-cta {
     display: block;
@@ -532,10 +544,14 @@ header .enquire {
   header nav {
     display: flex;
     text-align: center;
+    padding: 0 10px;
   }
   header nav ul li {
     display: block;
     padding: 10px 0;
+    margin-right: 0;
+    text-align: left;
+    color: #000;
   }
   header nav ul {
     display: none;
@@ -565,7 +581,7 @@ header .enquire {
     display: flex;
     align-items: center;
     position: fixed;
-    top: 20px;
+    top: 27px;
     left: 20px;
     width: 26px;
     height: 26px;
@@ -601,16 +617,16 @@ header .enquire {
     margin: 0;
     padding: 80px 0;
     list-style: none;
-    background-color: #ECEFF1;
+    background-color: #ffffff;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    overflow: auto;
     transition-duration: 0.25s;
   }
   header .menu__item {
     display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    padding: 12px 17px;
+    color: #000;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: 0.25s;
@@ -622,9 +638,104 @@ header .enquire {
     font-size: 10px;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-left: 50px;
+    margin-left: 30px;
     padding: 11px 20px;
   }
+}
+.collapse-item .sub-nav,
+.sub-item {
+  display: block !important;
+}
+.collapse-item {
+  display: none;
+  width: 96%;
+}
+.collapse-item ul {
+  padding: 0 10px;
+}
+.collapse-item ul li {
+  padding: 0px 0;
+}
+.collapse-item ul li h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.collapse svg {
+  transition: 0.3s ease;
+  float: right;
+  margin: 0px 15px;
+  width: 10px;
+}
+.collapse span {
+  display: inline-block;
+  margin: 0px 15px;
+}
+.active svg {
+  transform: rotate(45deg);
+}
+.collapse:nth-of-type(odd) path {
+  fill: #000000;
+}
+.collapse:nth-of-type(even) path {
+  fill: #21c3a2;
+}
+.collapse:last-of-type .active .collapse span {
+  color: #3054D4;
+}
+.collapse .collapse-header {
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.collapse:first-of-type .collapse-header {
+  border-radius: 5px 5px 0px 0px ;
+}
+.collapse:last-of-type .collapse-header {
+  border-radius: 0px 0px 5px 5px;
+}
+.collapse:last-of-type .active {
+  border-radius: 0px !important;
+  background-color: rgba(136, 136, 136, 0.05);
+  color: #3054D4 !important;
+}
+.collapse:last-of-type .active + .collapse-item a:last-of-type {
+  border-radius: 0px 0px 5px 0px;
+}
+.collapse:nth-of-type(odd) .collapse-header {
+  color: #000000;
+}
+.collapse:nth-of-type(even) .collapse-header {
+  background: #ffffff;
+  color: #21c3a2;
+}
+.collapse:last-of-type .collapse-header {
+  position: relative;
+}
+.collapse:last-of-type .active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  background: #3054D4;
+}
+.collapse a {
+  display: block;
+  padding: 10px;
+  font-size: 13px;
+  color: #848484;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.collapse a:hover {
+  padding-left: 20px;
+  color: #21c3a2;
 }
 @media only screen and (max-width: 1280px) {
   header nav ul li a {
@@ -725,6 +836,14 @@ header .enquire {
   .hero-section {
     flex-direction: column;
     height: auto;
+    padding-bottom: 60px;
+    margin-top: 15%;
+  }
+  .hero-section .left-content p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    margin-bottom: 32px;
   }
   .hero-section .left-content {
     padding-right: 0%;
@@ -746,11 +865,17 @@ header .enquire {
     padding: 6rem 0rem;
   }
   .platform .wrk {
-    padding: 10px 56px 10px 36px;
+    padding: 24px 17px 20px 27px;
+    width: auto;
+    height: auto;
   }
   ​ .platform .wrk p {
-    font-size: 1rem;
-    line-height: 30px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 31px;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
   }
   ​ .slide {
     margin: 0px 35px;
@@ -1024,8 +1149,17 @@ header .enquire {
   .rev {
     flex-direction: column-reverse;
   }
-  .content-right {
-    padding: 17px;
+  .content-right,
+  .content-left {
+    padding: 0 !important;
+    text-align: center;
+    margin-bottom: 8%;
+  }
+  .our-solution #wave {
+    display: none;
+  }
+  .our-solution {
+    padding: 5% 30px;
   }
 }
 .about-bee {
@@ -1061,6 +1195,28 @@ header .enquire {
   transform: translate(1px, -100px);
   background-size: cover;
 }
+@media only screen and (max-width: 767px) {
+  .about-bee .solution {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10%;
+  }
+  .about-bee .right-img {
+    margin: 20px 0;
+  }
+  .about-bee:before {
+    display: none;
+  }
+  .about-bee .about-box {
+    box-shadow: none;
+  }
+  .content-left h2 {
+    font-size: 1.7rem !important;
+    line-height: 2.4rem !important;
+  }
+}
 .brands {
   background: #fbfbfb;
   padding: 8% 0px;
@@ -1085,6 +1241,19 @@ header .enquire {
 }
 .brands .brands-logo .brands-logo ul li img {
   width: 200px;
+}
+@media only screen and (max-width: 767px) {
+  .brands {
+    text-align: center;
+  }
+  .brands .main-heading {
+    text-align: center;
+    padding-right: 0rem;
+    font-size: 2.2rem;
+  }
+  .brands .flex-item {
+    width: 196px;
+  }
 }
 .clients-slider {
   padding: 11% 0;
@@ -1215,6 +1384,27 @@ button.slick-next.slick-arrow {
   .btnNtxt {
     width: 100% !important;
     display: block !important;
+  }
+  .clients-slider .main-heading:after {
+    transform: translate(-185%, 58px);
+  }
+  .content {
+    flex-direction: column;
+  }
+  .thumbnail {
+    margin-top: 10px;
+  }
+  .thumbnail img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .sdCustomSliderHeadig {
+    font-size: 25px;
+    text-align: center;
+  }
+  .SdClientName,
+  .SdClientDesc {
+    text-align: center;
   }
 }
 .cases-cards {
@@ -1443,6 +1633,53 @@ button.slick-next.slick-arrow {
 .talk-section {
   padding: 10% 0;
 }
+@media only screen and (max-width: 767px) {
+  .cases-row {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .cases-col {
+    width: 100%;
+  }
+  .case-card img {
+    width: 100% !important;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card-holder {
+    margin-right: 30px;
+  }
+  .cases-row .text-col p {
+    font-size: 19px;
+  }
+  .cases-cards {
+    margin-bottom: 35px;
+  }
+  .talk-message-box-content {
+    flex-direction: column;
+  }
+  .talk-message-box {
+    max-width: 100%;
+    padding: 28px 30px;
+    text-align: center;
+  }
+  .talk-message-box-content .heading {
+    max-width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .h1 {
+    font-size: 43px;
+  }
+  .submit_button {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .talk-section {
+    padding: 7% 17px;
+  }
+}
 .blog-flex {
   display: flex;
   flex-direction: row;
@@ -1551,6 +1788,17 @@ button.slick-next.slick-arrow {
 .cta:hover .btn-background {
   left: 0;
 }
+@media only screen and (max-width: 767px) {
+  .blog-flex {
+    flex-direction: column;
+    padding: 0 5%;
+    margin-top: 50px;
+  }
+  .blog-flex .col3 {
+    width: 100%;
+    padding: 0;
+  }
+}
 .footer-cta {
   padding: 13% 0;
   background: url('/assets/resources/img/got-questions.svg') center 140px no-repeat;
@@ -1632,6 +1880,25 @@ button.slick-next.slick-arrow {
   color: #fff;
   font-weight: 600;
   font-size: 18px;
+}
+@media only screen and (max-width: 767px) {
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-row .footer-col-6 {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .footer-row .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-row .Signup__form {
+    margin-top: 9%;
+    display: block;
+    margin-bottom: 50px;
+  }
 }
 .bottom-footer {
   text-align: center;

@@ -171,7 +171,7 @@
     }
     
 }
-@media only screen and (max-width:767px){
+@media @m_screen{
     .solution {
         display: flex;
         flex-direction: column;
@@ -185,7 +185,15 @@
     .rev{
         flex-direction: column-reverse;
     }
-    .content-right {
-    padding: 17px;
+    .content-right, .content-left {
+        padding: 0 !important;
+        text-align: center;
+        margin-bottom: 8%;
+}
+.our-solution #wave{
+    display: none;
+}
+.our-solution{
+    padding: 5% 30px;
 }
 }
