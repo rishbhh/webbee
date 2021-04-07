@@ -1016,7 +1016,6 @@ header .enquire {
   overflow: hidden;
 }
 .our-solution #wave {
-  position: relative;
   height: 70px;
   width: 100%;
 }
@@ -1064,6 +1063,30 @@ header .enquire {
   position: absolute;
   top: 175px;
   left: 40%;
+}
+.solution .elements .el7 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -369px -9px;
+  width: 66px;
+  height: 132px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.solution .elements .el8 {
+  background: url(/assets/resources/img/elemets-all.png) no-repeat -752px -30px;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 75px;
+  transform: scale(0.9);
+}
+.solution .elements .el9 {
+  background: url(/assets/resources/img/elemets-all.png) no-repeat -1699px -58px;
+  width: 67px;
+  height: 34px;
+  position: absolute;
+  top: 190px;
+  right: 70px;
 }
 .solution .content-right {
   padding-left: 8%;
@@ -1214,6 +1237,7 @@ header .enquire {
   background: white;
   padding: 6%;
   border-radius: 35px;
+  position: relative;
 }
 .about-bee .about-box .main-heading {
   margin: 0;
@@ -1228,6 +1252,14 @@ header .enquire {
   margin-bottom: 30px;
   text-transform: uppercase;
   line-height: 3rem;
+}
+.about-bee .elements .el10 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -1513px -55px;
+  width: 41px;
+  height: 40px;
+  position: absolute;
+  bottom: 60px;
+  left: 40%;
 }
 .about-bee:before {
   content: '';
@@ -1264,6 +1296,14 @@ header .enquire {
 .brands {
   background: #fbfbfb;
   padding: 8% 0px;
+  position: relative;
+}
+.brands .elements .el11 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -1621px -55px;
+  width: 39px;
+  height: 40px;
+  position: absolute;
+  right: 150px;
 }
 .brands .main-heading {
   text-align: left;
@@ -1301,6 +1341,7 @@ header .enquire {
 }
 .clients-slider {
   padding: 11% 0;
+  position: relative;
 }
 .clients-slider .slick-prev,
 .clients-slider .slick-next {
@@ -1308,6 +1349,38 @@ header .enquire {
 }
 .clients-slider .main-heading:after {
   transform: translate(-339%, 58px);
+}
+.clients-slider .elements .el12 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -1412px -59px;
+  width: 36px;
+  height: 32px;
+  position: absolute;
+  left: 160px;
+}
+.clients-slider .elements .el13 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -1621px -55px;
+  width: 39px;
+  height: 40px;
+  position: absolute;
+  right: 170px;
+  top: 30%;
+}
+.clients-slider .elements .el14 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -34px -10px;
+  width: 131px;
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+  transform: scale(0.8);
+}
+.clients-slider .elements .el15 {
+  background: url('/assets/resources/img/elemets-all.png') no-repeat -1513px -55px;
+  width: 41px;
+  height: 40px;
+  position: absolute;
+  right: 605px;
+  bottom: 219px;
 }
 /* slider styles */
 .sd_master_wrapper {
@@ -1676,6 +1749,23 @@ button.slick-next.slick-arrow {
 }
 .talk-section {
   padding: 10% 0;
+  position: relative;
+}
+.talk-section .dots-container.static {
+  background-image: url(/assets/resources/img/dots-bg.png);
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.2;
+  position: absolute;
+  width: 570px;
+  height: 240px;
+  display: block;
+  top: 210px;
+  left: 40px;
+}
+.message-icon img {
+  vertical-align: middle;
 }
 @media only screen and (max-width: 767px) {
   .cases-row {

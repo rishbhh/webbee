@@ -85,43 +85,43 @@ if ($body.mousemove(function (t) {
 
 ));
 
-var controller = new ScrollMagic.Controller();
-home_tween = (new TimelineMax).to(".el1", 2.5, {
-    x: -300, y: -300, ease: Power1.easeOut
-}
+// var controller = new ScrollMagic.Controller();
+// home_tween = (new TimelineMax).to(".el1", 2.5, {
+//     x: -300, y: -300, ease: Power1.easeOut
+// }
 
-    , "s_elem").to(".el2", 2.5, {
-        x: 150, ease: Power1.easeOut, delay: .5
-    }
+//     , "s_elem").to(".el2", 2.5, {
+//         x: 150, ease: Power1.easeOut, delay: .5
+//     }
 
-        , "s_elem").to(".el3", 4, {
-            x: 250, ease: Power1.easeOut
-        }
+//         , "s_elem").to(".el3", 4, {
+//             x: 250, ease: Power1.easeOut
+//         }
 
-            , "s_elem").to(".el4", 2.5, {
-                x: -150, y: 270, scale: 0.5, ease: Power1.easeOut
-            }
+//             , "s_elem").to(".el4", 2.5, {
+//                 x: -150, y: 270, scale: 0.5, ease: Power1.easeOut
+//             }
 
-                , "s_elem").to(".el5", 2.5, {
-                    y: 100, x: 200, ease: Power1.easeOut
-                }
+//                 , "s_elem").to(".el5", 2.5, {
+//                     y: 100, x: 200, ease: Power1.easeOut
+//                 }
 
-                    , "s_elem").to(".el6", 3.5, {
-                        y: -80, x: 300, ease: Power1.easeOut
-                    }
+//                     , "s_elem").to(".el6", 3.5, {
+//                         y: -80, x: 300, ease: Power1.easeOut
+//                     }
 
-                        // , "s_elem").to(".elem_6", 3, {
-                        //                 y: -200, x: 100, ease: Power1.easeOut
-                        //  }
+//                         // , "s_elem").to(".elem_6", 3, {
+//                         //                 y: -200, x: 100, ease: Power1.easeOut
+//                         //  }
 
-                        , "s_elem").to(".el2", 3.5, {
-                            y: -250, x: 100, ease: Power1.easeOut
-                        }
+//                         , "s_elem").to(".el2", 3.5, {
+//                             y: -250, x: 100, ease: Power1.easeOut
+//                         }
 
-                            , "s_elem"),
-    leaf_scene = new ScrollMagic.Scene({
-        triggerElement: ".hero-section", duration: "100%", triggerHook: 0,
-        triggerElement: ".our-solution", duration: "100%", triggerHook: 0
-    }
+//                             , "s_elem"),
+//     leaf_scene = new ScrollMagic.Scene({
+//         triggerElement: ".hero-section", duration: "100%", triggerHook: 0,
+//         // triggerElement: ".our-solution", duration: "100%", triggerHook: 0
+//     }
 
-    ).setTween(home_tween).addTo(controller);
+//     ).setTween(home_tween).addTo(controller);

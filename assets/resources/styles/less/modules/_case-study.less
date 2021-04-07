@@ -275,8 +275,25 @@ left: 0;
 // }
 .talk-section{
     padding:10% 0;
+    position: relative;
+    .dots-container.static {
+        background-image: url(/assets/resources/img/dots-bg.png);
+        background-position: 0 0;
+        background-repeat: repeat;
+        background-size: cover;
+        opacity: 0.2;
+        position: absolute;
+        display: block;
+        width: 570px;
+        height: 240px;
+        display: block;
+        top: 210px;
+        left: 40px;
+    }
 }
-
+.message-icon img{
+    vertical-align: middle;
+}
 @media @m_screen{
     .cases-row{
         flex-direction: column;
