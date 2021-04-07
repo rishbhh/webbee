@@ -408,7 +408,7 @@ header .mega-menu {
   transition: all 0.3s ease;
   visibility: hidden;
   opacity: 0;
-  right: 0;
+  right: 20px;
   top: 96px;
 }
 header .mega-menu .flex-mega {
