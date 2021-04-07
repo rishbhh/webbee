@@ -121,7 +121,17 @@ if ($body.mousemove(function (t) {
 //                             , "s_elem"),
 //     leaf_scene = new ScrollMagic.Scene({
 //         triggerElement: ".hero-section", duration: "100%", triggerHook: 0,
-//         // triggerElement: ".our-solution", duration: "100%", triggerHook: 0
+//         triggerElement: ".our-solution", duration: "100%", triggerHook: 0
 //     }
 
 //     ).setTween(home_tween).addTo(controller);
+var rs = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".w1",
+        scrub: true,
+        start: "top bottom",
+    }
+});
+
+rs.to(".content-right", { x: 200, duration: 2 });
+
