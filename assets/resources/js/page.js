@@ -63,9 +63,6 @@ $('.collapse-header').click(function () {
 
 });
 
-// leopard illusion
-
-
 
 
 $body = $(".hero-section"),
@@ -86,41 +83,44 @@ if ($body.mousemove(function (t) {
     })
 }
 
-), $(".atg_folio").length) {
-    var $word = $("path#word");
-    pathPrepare($word);
+));
 
-    var controller = new ScrollMagic.Controller,
-        tween = (new TimelineMax).add(TweenMax.to($word, .1, {
-            strokeDashoffset: 0, ease: Sine.easeOut
+var controller = new ScrollMagic.Controller();
+home_tween = (new TimelineMax).to(".el1", 2.5, {
+    x: -300, y: -300, ease: Power1.easeOut
+}
+
+    , "s_elem").to(".el2", 2.5, {
+        x: 150, ease: Power1.easeOut, delay: .5
+    }
+
+        , "s_elem").to(".el3", 4, {
+            x: 250, ease: Power1.easeOut
         }
 
-        )),
-        scene = new ScrollMagic.Scene({
-            triggerElement: ".section_4", duration: "2800", triggerHook: 1, tweenChanges: !0
-        }
+            // , "s_elem").to(".elem_1", 2.5, {
+            //     x: -150, y: -100, ease: Power1.easeOut
+            // }
 
-        ).setTween(tween).addTo(controller),
-        scene = new ScrollMagic.Scene({
-            triggerElement: ".section_4", duration: "200%", triggerHook: .25
-        }
+            // , "s_elem").to(".elem_5", 2.5, {
+            //         y: -200, x: -350, ease: Power1.easeOut
+            // }
 
-        ).setPin(".atg_scrollto_cont").addTo(controller);
+            // , "s_elem").to(".elem_7", 3.5, {
+            //             y: -80, x: 300, ease: Power1.easeOut
+            // }
 
-    (controller = new ScrollMagic.Controller).scrollTo(function (t) { }
+            // , "s_elem").to(".elem_6", 3, {
+            //                 y: -200, x: 100, ease: Power1.easeOut
+            //  }
 
-    ),
-        controller.scrollTo(function (t) {
-            TweenMax.to(window, 1, {
-                scrollTo: {
-                    y: t, autoKill: !0
-                }
-
-                , ease: Cubic.easeInOut
+            , "s_elem").to(".el2", 3.5, {
+                y: -250, x: 100, ease: Power1.easeOut
             }
 
-            )
-        }
+                , "s_elem"),
+    leaf_scene = new ScrollMagic.Scene({
+        triggerElement: ".hero-section", duration: "100%", triggerHook: 0
+    }
 
-        )
-}
+    ).setTween(home_tween).addTo(controller);

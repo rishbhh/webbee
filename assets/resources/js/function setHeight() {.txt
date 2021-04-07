@@ -10535,7 +10535,7 @@ function blink_g2() {
 
     );
 
-    var controller=new ScrollMagic.Controller,
+    
     tween=(new TimelineMax).to(".macbook_frame span img", 40, {
             y:-1047, ease:Power1.easeOut
         }
