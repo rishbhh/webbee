@@ -1,6 +1,6 @@
 .about-bee{
     padding: 17% 0;
-    
+    clear: both;
     .about-box{
         box-shadow: 1px 1px 62px #efefef;
         background: white;
@@ -68,4 +68,26 @@
         font-size: 1.7rem !important;
         line-height: 2.4rem !important;
     }
+}
+
+
+
+.overflow__cont{
+    overflow: hidden;
+        .heading__sol{
+            transform: translateY(200px);
+            transition: all ease 1s;
+            // transition-delay: .1s;
+            opacity: 0;
+        }
+        &.active{
+            .heading__sol{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+}
+
+.about_bee-heading{
+    padding-bottom: 18px;
 }
