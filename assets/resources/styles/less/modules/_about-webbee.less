@@ -44,7 +44,154 @@
     background-size: cover;
 
 }
-
+.banner-section{
+    
+    display: flex;
+background-color: #fbfbfb;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10% 3%;
+    position: relative;
+    .left-content{
+        width: 50%;
+    }
+    .left-content h1 {
+        font-weight: 300;
+        line-height: 2em;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-right: 50px;
+    }
+    .right-image{
+        img{
+            width: 500px;
+        }
+    }
+}
+.about-off{
+    position: relative;
+    padding: 10% 0;
+    .flex-about{
+        display: flex;
+            justify-content: space-around;
+            position: relative;
+            .img-box{
+                padding-right: 90px;
+                img{
+                    width: 600px;
+                }
+            }
+            .about-con{
+                .sub-h{
+                    font: normal normal 600 20px/37px Montserrat;
+                    letter-spacing: 2px;
+                    color: #1A1A1A;
+                    text-transform: uppercase;
+                    margin-top: 0;
+                }
+                p{
+                    font: normal normal normal 15px/27px Nexa;
+                    letter-spacing: 0.8px;
+                }
+            }
+             .dots-container.static {
+                background-image: url(/assets/resources/img/dots-bg.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    width: 570px;
+    height: 560px;
+    display: block;
+    top: 210px;
+    left: -70px;
+    z-index: -1;
+            }
+    }
+}
+.collag{
+    overflow: hidden;
+    margin-top: 5%;
+}
+.collage-block{
+    grid-template-rows: 7.5vw 7.4vw 9.2vw;
+    grid-template-areas:
+        "image-1 . image-4 . ."
+        "image-1 image-2 image-4 image-3 image-6"
+        "image-1 image-2 image-5 image-5 image-6";
+    grid-template-columns: minmax(19.1%, 220px) minmax(10.5%, 180px) minmax(10.6%, 140px) minmax(13%, 180px) minmax(20%, 1fr);
+    display: grid;
+ 
+    margin-bottom: 50px;
+    grid-gap: 15px;
+    margin-right: calc((-1 * (100vw - 100%)/2));
+   .collage-image.image-1 {
+        display: block;
+        grid-area: image-1;
+    }
+    .collage-image.image-2 {
+        display: block;
+        grid-area: image-2;
+    }
+    .collage-image.image-3 {
+        display: block;
+        grid-area: image-3;
+    }
+    .collage-image.image-4 {
+        display: block;
+        grid-area: image-4;
+    }
+    .collage-image.image-5 {
+        display: block;
+        grid-area: image-5;
+    }
+    .collage-image.image-6 {
+        display: block;
+        grid-area: image-6;
+    }
+    .cover-image{
+        width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    }
+}
+.partners{
+    background: #fbfbfb;
+    padding: 8% 0px;
+    position: relative;
+     .main-heading {
+        text-align: left;
+        padding-right: 40rem;
+        position: relative;
+    }
+     .main-heading:after {
+        content: '';
+        position: absolute;
+        width: 115px;
+        height: 4px;
+        background: #154df1;
+        transform: translate(0, 0);
+        left: 0;
+        top: -10px;
+    }
+}
+.part-logo{
+    margin-top: 8%;
+    .flex-item{
+        padding: 5px;
+    width: 27%;
+    margin-top: 10px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    }
+}
 @media @m_screen{
     .about-bee{
         .solution {

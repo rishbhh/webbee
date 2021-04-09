@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('.customer-logos').slick({
         slidesToShow: 4,
@@ -26,7 +27,7 @@ $(document).ready(function () {
 });
 $(window).scroll(function () {
     if ($(this).scrollTop() > 120) {
-        $('header').addClass('fixed').fadeIn;
+        $('header').addClass('fixed').slideUp;
     } else {
         $('header').removeClass('fixed');
     }
@@ -125,13 +126,5 @@ if ($body.mousemove(function (t) {
 //     }
 
 //     ).setTween(home_tween).addTo(controller);
-var rs = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".w1",
-        scrub: true,
-        start: "top bottom",
-    }
-});
 
-rs.to(".content-right", { x: 200, duration: 2 });
 
