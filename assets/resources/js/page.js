@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+
+
+
     $('.customer-logos').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -24,13 +27,69 @@ $(document).ready(function () {
             }
         }]
     });
-});
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 120) {
-        $('header').addClass('fixed').slideUp;
-    } else {
-        $('header').removeClass('fixed');
-    }
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 120) {
+            $('header').addClass('fixed').fadeIn;
+        } else {
+            $('header').removeClass('fixed');
+        }
+    });
+    const tl = gsap.timeline();
+    tl.from(".box", { duration: 1, y: 100, opacity: 0 })
+    tl.to(".box", { duration: 1, y: 0, opacity: 1 })
+
+
+    $('.collapse-header').click(function () {
+
+        $('.collapse-item').slideUp();
+
+        if ($(this).hasClass('active')) {
+            $(this).next().slideUp();
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).next().slideDown();
+            $('.collapse-header').removeClass('active');
+            $(this).addClass('active');
+        }
+
+
+    });
+
+    const scroll_elem = gsap.utils.toArray('.m_s_el');
+    scroll_elem.forEach(s_elem => {
+        gsap.to(s_elem, {
+            y: -200,
+            duration: 2.5,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: s_elem,
+                scrub: true
+            }
+        })
+    });
+
+    const heading_elem = gsap.utils.toArray('.overflow__cont');
+    heading_elem.forEach(h_elem => {
+        gsap.to(h_elem, {
+            scrollTrigger: {
+                trigger: h_elem,
+                start: "top bottom",
+                toggleClass: "active",
+            }
+        })
+    });
+
+    // gsap.to(".overflow__cont", {
+    //     scrollTrigger: {
+    //       trigger: ".overflow__cont",                        
+    //       start: "top bottom",              
+    //       toggleClass: "active",
+    //       ease: "power2"
+    //     }
+    //   });    
+
 });
 jQuery(document).ready(function ($) {
     var $slickElement = $('.slideshow');
@@ -42,89 +101,17 @@ jQuery(document).ready(function ($) {
 
 });
 
-const tl = gsap.timeline();
-tl.from(".box", { duration: 1, y: 100, opacity: 0 })
-tl.to(".box", { duration: 1, y: 0, opacity: 1 })
-
-
-$('.collapse-header').click(function () {
-
-    $('.collapse-item').slideUp();
-
-    if ($(this).hasClass('active')) {
-        $(this).next().slideUp();
-        $(this).removeClass('active');
-    }
-    else {
-        $(this).next().slideDown();
-        $('.collapse-header').removeClass('active');
-        $(this).addClass('active');
-    }
-
-
-});
 
 
 
-$body = $(".hero-section"),
-    elem_1 = $(".elements .el1"),
-    elem_2 = $(".elements .el2"),
-    elem_3 = $(".elements .el3");
-if ($body.mousemove(function (t) {
-    var e = t.pageX / $body.width() - .6, i = t.pageY / $body.height() - .6; TweenLite.to(elem_1, 2.5, {
-        y: 50 * e, x: 60 * i, ease: Expo.easeOut
-    }
 
-    ), TweenLite.to(elem_2, 1.5, {
-        x: 45 * e, y: 75 * i, ease: Sine.easeOut
-    }
-
-    ), TweenLite.to(elem_3, 2, {
-        rotation: -25 * e, y: -35 * e, x: -25 * i, ease: Sine.easeOut, transformOrigin: "left bottom"
-    })
-}
-
-));
-
-// var controller = new ScrollMagic.Controller();
-// home_tween = (new TimelineMax).to(".el1", 2.5, {
-//     x: -300, y: -300, ease: Power1.easeOut
-// }
-
-//     , "s_elem").to(".el2", 2.5, {
-//         x: 150, ease: Power1.easeOut, delay: .5
+// var rs = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: ".w1",
+//         scrub: true,
+//         start: "top bottom",
 //     }
+// });
 
-//         , "s_elem").to(".el3", 4, {
-//             x: 250, ease: Power1.easeOut
-//         }
-
-//             , "s_elem").to(".el4", 2.5, {
-//                 x: -150, y: 270, scale: 0.5, ease: Power1.easeOut
-//             }
-
-//                 , "s_elem").to(".el5", 2.5, {
-//                     y: 100, x: 200, ease: Power1.easeOut
-//                 }
-
-//                     , "s_elem").to(".el6", 3.5, {
-//                         y: -80, x: 300, ease: Power1.easeOut
-//                     }
-
-//                         // , "s_elem").to(".elem_6", 3, {
-//                         //                 y: -200, x: 100, ease: Power1.easeOut
-//                         //  }
-
-//                         , "s_elem").to(".el2", 3.5, {
-//                             y: -250, x: 100, ease: Power1.easeOut
-//                         }
-
-//                             , "s_elem"),
-//     leaf_scene = new ScrollMagic.Scene({
-//         triggerElement: ".hero-section", duration: "100%", triggerHook: 0,
-//         triggerElement: ".our-solution", duration: "100%", triggerHook: 0
-//     }
-
-//     ).setTween(home_tween).addTo(controller);
-
+// rs.to(".content-right", { x: 200, duration: 2 });
 
