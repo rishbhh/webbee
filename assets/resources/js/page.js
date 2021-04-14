@@ -1,6 +1,73 @@
 
 $(document).ready(function () {
+    // var html = document.documentElement;
+    // var body = document.body;
 
+    // var scroller = {
+    //     target: document.querySelector("#scroll-container"),
+    //     ease: 0.05, // <= scroll speed
+    //     endY: 0,
+    //     y: 0,
+    //     resizeRequest: 1,
+    //     scrollRequest: 0,
+    // };
+
+    // var requestId = null;
+
+    // TweenLite.set(scroller.target, {
+    //     rotation: 0.01,
+    //     force3D: true
+    // });
+
+    // window.addEventListener("load", onLoad);
+
+    // function onLoad() {
+    //     updateScroller();
+    //     window.focus();
+    //     window.addEventListener("resize", onResize);
+    //     document.addEventListener("scroll", onScroll);
+    // }
+
+    // function updateScroller() {
+
+    //     var resized = scroller.resizeRequest > 0;
+
+    //     if (resized) {
+    //         var height = scroller.target.clientHeight;
+    //         body.style.height = height + "px";
+    //         scroller.resizeRequest = 0;
+    //     }
+
+    //     var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+
+    //     scroller.endY = scrollY;
+    //     scroller.y += (scrollY - scroller.y) * scroller.ease;
+
+    //     if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
+    //         scroller.y = scrollY;
+    //         scroller.scrollRequest = 0;
+    //     }
+
+    //     TweenLite.set(scroller.target, {
+    //         y: -scroller.y
+    //     });
+
+    //     requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
+    // }
+
+    // function onScroll() {
+    //     scroller.scrollRequest++;
+    //     if (!requestId) {
+    //         requestId = requestAnimationFrame(updateScroller);
+    //     }
+    // }
+
+    // function onResize() {
+    //     scroller.resizeRequest++;
+    //     if (!requestId) {
+    //         requestId = requestAnimationFrame(updateScroller);
+    //     }
+    // }
 
 
     $('.customer-logos').slick({
@@ -80,7 +147,25 @@ $(document).ready(function () {
             }
         })
     });
+    $body = $(".hero-section, .banner-section"),
+        elem_1 = $(".elements .el1"),
+        elem_2 = $(".elements .el2"),
+        elem_3 = $(".elements .el3");
+    if ($body.mousemove(function (t) {
+        var e = t.pageX / $body.width() - .6, i = t.pageY / $body.height() - .6; TweenLite.to(elem_1, 2.5, {
+            y: 50 * e, x: 60 * i, ease: Expo.easeOut
+        }
 
+        ), TweenLite.to(elem_2, 1.5, {
+            x: 45 * e, y: 75 * i, ease: Sine.easeOut
+        }
+
+        ), TweenLite.to(elem_3, 2, {
+            rotation: -25 * e, y: -35 * e, x: -25 * i, ease: Sine.easeOut, transformOrigin: "left bottom"
+        })
+    }
+
+    ));
     // gsap.to(".overflow__cont", {
     //     scrollTrigger: {
     //       trigger: ".overflow__cont",                        
@@ -89,6 +174,7 @@ $(document).ready(function () {
     //       ease: "power2"
     //     }
     //   });    
+
 
 });
 jQuery(document).ready(function ($) {
@@ -102,16 +188,7 @@ jQuery(document).ready(function ($) {
 });
 
 
-
-
-
-// var rs = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".w1",
-//         scrub: true,
-//         start: "top bottom",
-//     }
-// });
-
-// rs.to(".content-right", { x: 200, duration: 2 });
-
+$(function () {
+    $("#header-template").load("header.html");
+    $("#footer-template").load("footer.html");
+});
