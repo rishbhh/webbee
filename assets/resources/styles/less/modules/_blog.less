@@ -71,7 +71,7 @@
             letter-spacing: normal;
             color: #001732;
             text-align: left;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
        
     }
@@ -118,6 +118,52 @@ left: 0;
 }
 .bottom-p{
     padding-bottom: 0px;
+}
+
+
+
+
+.link {
+	color: #000000;
+    cursor: pointer;
+    font-weight: 600;
+	text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link--arrowed {
+	display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+	
+	.arrow-icon {
+		position: relative;
+		top: -1px;
+		-webkit-transition: -webkit-transform 0.3s ease;
+		transition: -webkit-transform 0.3s ease;
+		transition: transform 0.3s ease;
+		transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+		vertical-align: middle;
+        stroke: #000;
+	}
+	
+	.arrow-icon--circle {
+		transition: stroke-dashoffset .3s ease;
+		stroke-dasharray: 95;
+		stroke-dashoffset: 95;
+	}
+	
+	&:hover {
+        color: #065dff;
+		.arrow-icon {
+			transform: translate3d(5px, 0, 0);
+            stroke:#065dff ;
+		}
+		
+		.arrow-icon--circle {
+			stroke-dashoffset: 0;
+		}
+	}
 }
 @media @m_screen {
     .blog-flex{
