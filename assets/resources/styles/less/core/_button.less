@@ -53,9 +53,20 @@ color: @white;
     border-color: #282828;
     color: #282828;
 }
-.btn svg{
+.btn:hover{
+    background:#282828 ;
+    color: #fff;
+}
+.btn:hover svg{
     width: 15px;
     margin-left: 10px;
+    fill: #fff;
+    transform: translate(10px, 1px);
+    transition: 0.4s all ease-in-out;
+}
+.btn svg{
+    width: 15px;
+    margin-left: 10px; transition: 0.4s all ease-in-out;
 }
 .submit_button {
     font-size: 17px;
@@ -155,4 +166,27 @@ fill: #fff;
 }
 .cta:hover .btn-background {
 left: 0;
+}
+
+@button_base_color: #1a40ff;
+@button_width: 60px;
+@button_height:40px;
+@secondary-color_alt: #000;
+@secondary-color_primary : @white;
+@keyframes btn_anim {
+    0% {
+      text-shadow: -4px 0px 0px fade(@secondary-color_primary,60%), 2px 0px 0px fade(@secondary-color_alt, 0%);
+    }
+    25% {
+      text-shadow: -8px 0px 0px fade(@secondary-color_primary,40%), 8px 0px 0px fade(@secondary-color_alt, 50%);
+    }
+    50% {
+      text-shadow: -6px 0px 0px fade(@secondary-color_primary, 0%), 6px 0px 0px fade(@secondary-color_alt, 30%);
+    }
+    75% {
+      text-shadow: -2px 0px 0px fade(@secondary-color_primary,40%), 4px 0px 0px fade(@secondary-color_alt, 40%);
+    }
+    100% {
+      text-shadow: -4px 0px 0px fade(@secondary-color_primary,60%), 2px 0px 0px fade(@secondary-color_alt, 0%);
+    }
 }

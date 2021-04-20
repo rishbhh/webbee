@@ -67,9 +67,16 @@
 //         requestId = requestAnimationFrame(updateScroller);
 //     }
 // }
+
+
 $(document).ready(function () {
 
-
+    $(".Click-here").on('click', function() {
+        $(".custom-model-main").addClass('model-open');
+      }); 
+      $(".close-btn, .bg-overlay").click(function(){
+        $(".custom-model-main").removeClass('model-open');
+      });
 
     $('.customer-logos').slick({
         slidesToShow: 4,
@@ -192,4 +199,5 @@ jQuery(document).ready(function ($) {
 $(function () {
     $("#header-template").load("header.html");
     $("#footer-template").load("footer.html");
+    $("#pop").load("pop.html");
 });
