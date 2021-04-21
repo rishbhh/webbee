@@ -72,52 +72,52 @@ function animateFrom(elem, direction) {
     direction = direction || 1;
     var x = 0,
         y = direction * 100;
-    if(elem.classList.contains("gs_reveal_fromLeft")) {
-      x = -100;
-      y = 0;
+    if (elem.classList.contains("gs_reveal_fromLeft")) {
+        x = -100;
+        y = 0;
     } else if (elem.classList.contains("gs_reveal_fromRight")) {
-      x = 100;
-      y = 0;
+        x = 100;
+        y = 0;
     }
     elem.style.transform = "translate(" + x + "px, " + y + "px)";
     elem.style.opacity = "0";
-    gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
-      duration: 1.25, 
-      x: 0,
-      y: 0, 
-      autoAlpha: 1, 
-      ease: "expo", 
-      overwrite: "auto"
+    gsap.fromTo(elem, { x: x, y: y, autoAlpha: 0 }, {
+        duration: 2.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto"
     });
-  }
-  
-  function hide(elem) {
-    gsap.set(elem, {autoAlpha: 0});
-  }
-  
-  document.addEventListener("DOMContentLoaded", function() {
+}
+
+function hide(elem) {
+    gsap.set(elem, { autoAlpha: 0 });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
-    
-    gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
-      hide(elem); // assure that the element is hidden when scrolled into view
-      
-      ScrollTrigger.create({
-        trigger: elem,
-        onEnter: function() { animateFrom(elem) }, 
-        onEnterBack: function() { animateFrom(elem, -1) },
-        onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
-      });
+
+    gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
+        hide(elem); // assure that the element is hidden when scrolled into view
+
+        ScrollTrigger.create({
+            trigger: elem,
+            onEnter: function () { animateFrom(elem) },
+            onEnterBack: function () { animateFrom(elem, -1) },
+            onLeave: function () { hide(elem) } // assure that the element is hidden when scrolled into view
+        });
     });
-  });
-  
+});
+
 $(document).ready(function () {
 
-    $(".Click-here").on('click', function() {
+    $(".Click-here").on('click', function () {
         $(".custom-model-main").addClass('model-open');
-      }); 
-      $(".close-btn, .bg-overlay").click(function(){
+    });
+    $(".close-btn, .bg-overlay").click(function () {
         $(".custom-model-main").removeClass('model-open');
-      });
+    });
 
     $('.customer-logos').slick({
         slidesToShow: 4,
@@ -176,7 +176,7 @@ $(document).ready(function () {
     const scroll_elem = gsap.utils.toArray('.m_s_el');
     scroll_elem.forEach(s_elem => {
         gsap.to(s_elem, {
-            y: -200,
+            y: -100,
             duration: 2.5,
             ease: "power4.out",
             scrollTrigger: {
