@@ -68,6 +68,9 @@
 //     }
 // }
 
+
+
+
 function animateFrom(elem, direction) {
     direction = direction || 1;
     var x = 0,
