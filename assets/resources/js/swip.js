@@ -355,7 +355,33 @@
         maintTextBulletsSlider();
     }
 
+/*Cols text slider*/
+var $colsTextSlider;
+function colsTextSliderInit(){
+    $('.cols-text-slider .swiper-container').each(function(){
+        $colsTextSlider = new Swiper($(this)[0], {
+            spaceBetween: 40,
+            slidesPerView: 'auto',
+            speed: 400,
+            loop: false,
+            touchStartPreventDefault: false,
+            watchOverflow: true,
+            navigation: {
+                nextEl: $(this).parents('.cols-text-slider').find('.next-btn'),
+                prevEl: $(this).parents('.cols-text-slider').find('.prev-btn')
+            },
+            breakpoints:{
+                480: {
+                    spaceBetween: 30
+                }
+            }
+        });
+    })
+}
 
+if($('.cols-text-slider').length){
+    colsTextSliderInit();
+}
 
 
 

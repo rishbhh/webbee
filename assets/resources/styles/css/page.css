@@ -304,7 +304,7 @@ a {
 }
 p {
   font-family: nexaregular;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   color: #1A1A1A;
   letter-spacing: 1.8px;
@@ -4059,6 +4059,227 @@ button.slick-next.slick-arrow {
   margin-top: 60px;
   color: #1a1a1a;
 }
+.wooC {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wooC .woo-box {
+  width: 30%;
+}
+.wooC .woo-box h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+.p-4 {
+  padding-right: 30%;
+}
+.right-l {
+  position: relative;
+}
+.right-l:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #1233ff;
+  top: 12px;
+  margin-left: 9px;
+  left: -70px;
+}
+/*Technologies box*/
+.technologies-box {
+  margin: 180px 0 128px;
+}
+/*Specification box*/
+.specification-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 211px;
+}
+.technologies-box > *:last-child {
+  margin-bottom: 0;
+}
+.specification-box .title-box {
+  width: 42.38249595%;
+  margin: -5px 0 0;
+}
+.specification-box .title-box > *:first-child {
+  margin-top: 0;
+}
+.specification-box .title-box > *:last-child {
+  margin-bottom: 0;
+}
+.specification-box .h2 {
+  line-height: 1.16666667em;
+  max-width: none;
+}
+.specification-box .text-box {
+  color: #8691A8;
+  width: 50%;
+  margin-left: auto;
+}
+.gradient-box .specification-box .text-box {
+  color: #25293D;
+}
+.technologies-box .text-box > * {
+  max-width: 593px;
+}
+.specification-box .text-box > * {
+  margin-left: 0;
+}
+.specification-box .text-box > *:first-child {
+  margin-top: 0;
+}
+.specification-box .text-box > *:last-child {
+  margin-bottom: 0;
+}
+.specification-box .description-box {
+  width: 100%;
+  margin: 44px 0 0;
+}
+.specification-box .description-box > *:first-child {
+  margin-top: 0;
+}
+.specification-box .description-box > *:last-child {
+  margin-bottom: 0;
+}
+.specification-box .cols-text-slider:before {
+  display: none;
+}
+.specification-box .cols-text-slider + .important-text {
+  margin-top: 110px;
+}
+.specification-box:before,
+.specification-box:after {
+  position: absolute;
+  z-index: -1;
+  background: url("../i/bg-ball-small.png") no-repeat 0 0% auto;
+}
+.specification-box:after {
+  background: url("../i/decolorized-ball.png") no-repeat 0 0% auto;
+}
+.specification-box:first-child:before,
+.specification-box:nth-child(2):before {
+  content: '';
+  left: -156px;
+  top: -10px;
+  width: 37px;
+  height: 37px;
+}
+.specification-box:nth-child(2):before {
+  top: -60px;
+  left: 114.5%;
+}
+.specification-box:nth-child(2):after {
+  content: '';
+  top: 60px;
+  left: calc(((100vw - 100%)/2 + 100px) * -1);
+  width: 223px;
+  height: 223px;
+}
+.specification-box:nth-child(4) .cols-text-slider .swiper-container:before,
+.specification-box:nth-child(4):before,
+.specification-box:nth-child(5):after {
+  content: '';
+  position: absolute;
+  background: url("../i/decolorized-ball-small.png") no-repeat 0 0% auto;
+}
+.specification-box:nth-child(4) .cols-text-slider .swiper-container:before {
+  top: -20px;
+  left: -198px;
+  width: 40px;
+  height: 40px;
+}
+.specification-box:nth-child(4):before {
+  width: 78px;
+  height: 78px;
+  top: 60px;
+  left: 114%;
+}
+.specification-box:nth-child(5):before {
+  content: '';
+  width: 78px;
+  height: 78px;
+  top: -50px;
+  left: -148px;
+}
+.specification-box:nth-child(5):after {
+  width: 40px;
+  height: 40px;
+  top: 210px;
+  left: 117%;
+}
+/*Cols text slider*/
+.cols-text-slider {
+  position: relative;
+  margin: 0 0 84px;
+}
+.intro-text-box + .cols-text-slider {
+  margin-top: 210px;
+}
+.cols-text-slider:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -84px;
+  top: -36px;
+  width: 182px;
+  height: 412px;
+  background: url("../i/dot-bg.png") repeat 100% 10% 10px;
+}
+.cols-text-slider > p {
+  max-width: 1006px;
+  margin-left: 0;
+}
+.cols-text-slider .h2 {
+  margin: 0 0 28px;
+}
+.cols-text-slider .swiper-btns-box {
+  margin-bottom: 96px;
+}
+.cols-text-slider .swiper-container {
+  overflow: visible;
+}
+.cols-text-slider .swiper-slide {
+  color: #8691A8;
+  width: 277px;
+  max-width: calc(100% - 50px);
+}
+.cols-text-slider .swiper-slide .title {
+  color: #424242;
+  margin: 0 0 13px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+.cols-text-slider .swiper-slide > *:last-child {
+  margin-bottom: 0;
+  line-height: 22px;
+  color: #1A1A1A;
+}
+.mb-0 {
+  margin-bottom: 0%;
+}
+.over {
+  overflow: hidden;
+}
+.over h2 {
+  line-height: 1.6em !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  padding-right: 80px;
+}
 .swiperss {
   background: #f8f8f8;
   padding: 5% 0px;
@@ -4392,7 +4613,7 @@ h1 + *,
   top: 13px;
   width: 6px;
   height: 6px;
-  background: #dc0c1c;
+  background: #2554de;
   border-radius: 110%;
 }
 .main-text-slider {
