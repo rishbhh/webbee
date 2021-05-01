@@ -4058,6 +4058,8 @@ button.slick-next.slick-arrow {
   letter-spacing: 1px;
   margin-top: 60px;
   color: #1a1a1a;
+  line-height: 1.6em;
+  font-weight: 500;
 }
 .wooC {
   display: flex;
@@ -4075,11 +4077,28 @@ button.slick-next.slick-arrow {
   font-weight: 500;
   line-height: 1.6em;
 }
+.tally {
+  margin-bottom: 8%;
+}
+.tally h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.tally .p-cont {
+  padding-left: 15%;
+}
 .p-4 {
   padding-right: 30%;
 }
 .right-l {
   position: relative;
+}
+.right-l a {
+  color: #1233ff;
+  font-weight: 600;
 }
 .right-l:after {
   content: '';
@@ -4091,9 +4110,49 @@ button.slick-next.slick-arrow {
   margin-left: 9px;
   left: -70px;
 }
+.wooC2 {
+  margin-top: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wooC2 .woo-box {
+  width: 21%;
+  margin-bottom: 5%;
+  padding-right: 5%;
+}
+.wooC2 .woo-box h6 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+.wooC3 {
+  margin-top: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wooC3 .woo-box {
+  width: 43%;
+  margin-bottom: 5%;
+  padding-right: 5%;
+}
+.wooC3 .woo-box h6 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.6em;
+}
 /*Technologies box*/
 .technologies-box {
-  margin: 180px 0 128px;
+  margin: 50px 0 128px;
 }
 /*Specification box*/
 .specification-box {
@@ -4260,7 +4319,7 @@ button.slick-next.slick-arrow {
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.6em;
-  font-weight: 500;
+  font-weight: 600;
 }
 .cols-text-slider .swiper-slide > *:last-child {
   margin-bottom: 0;
@@ -5270,6 +5329,15 @@ h1 + *,
 }
 .swiper-btns-box .swiper-btn:last-of-type {
   margin-left: 26px;
+}
+.hs h6:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #1233ff;
+  top: 10px;
+  margin-left: 159px !important;
 }
 @media screen and (max-width: 780px) {
   .lg-outer .lg-item {
