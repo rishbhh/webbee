@@ -97,6 +97,34 @@
 	}
 	
 }
+.important-text.two-cols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 50px;
+	padding-left: 0;
+}
+ul.important-text, ol.important-text {
+	margin: 48px 0;
+	max-width: none;
+	list-style: none;
+}
+.important-text.two-cols li {
+	width: 40%;
+	padding-right: 40px;
+	font-size: 17px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+ul.important-text li, ol.important-text li {
+	padding-left: 60px;
+	margin: 0 0 40px;
+	background: url(/assets/resources/img/list-bullet-large.svg);
+	background-repeat: no-repeat;
+	background-position: 7px;
+	background-size: 40px auto;
+}
 .net-s{
 	background: #f8f8f8;
 		h2 {
@@ -292,6 +320,25 @@
 	}
 
 .blue-pint{
+	h5{
+	    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #717171;
+    font-weight: 500;
+    line-height: 1.6em;
+	}
+	.fnt li{
+		padding-bottom: 20px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 2em;
+    font-weight: 500;
+    position: relative;
+text-transform: capitalize;
+    color: rgb(102, 102, 102);
+	font-family:nexaregular;
+	}
 	ul{
 		list-style: none;
 		margin-top: 40px;
@@ -416,13 +463,79 @@
 	.woo-box{
 		width: 30%;
 		h6{
-			font-size: 20px;
+			font-size: 18px;
     margin-bottom: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 500;
 	line-height: 1.6em;
 		}
+	}
+}
+.m-w{
+	width: 100%;
+	margin-top: 15px;
+}
+.testimo{
+	padding: 5% 0;
+	background: #f8f8f8;
+	.p-l {
+		padding-left: 20%;
+	}
+	.t1{
+		margin-bottom: 30px;
+		position: relative;
+	}
+	.t1:after {
+		content: '"';
+    position: absolute;
+    font-size: 110px;
+    top: -20px;
+    left: -90px;
+    font-style: italic;
+    font-weight: 500;
+	}
+	.right-l {
+		position: relative;
+		left: 60px;
+	}
+	 h2 {
+		font-size: 1.9rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+}
+.hh6{
+	h6{
+		font-size: 18px;
+margin-bottom: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-weight: 500;
+line-height: 1.6em;
+	}
+}
+.three{
+	.two-cols li{
+	width: 20%;
+    padding-right: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+}
+.new-u{
+	list-style: none;
+	padding: 0;
+	li{
+		text-transform: uppercase;
+		letter-spacing: 1px ;
+		margin-bottom: 20px;
+		font-size: 14px;
+		font-weight: 500;
 	}
 }
 .tally{
@@ -698,7 +811,7 @@ a{
 
 .cols-text-slider .swiper-slide {
 	color: #8691A8;
-	width: 277px;
+	width: 390px;
 	max-width: calc(100% - 50px);
 }
 

@@ -131,7 +131,7 @@
   font-style: normal;
 }
 .button-blue {
-  padding: 10px 30px;
+  padding: 10px 24px;
   background: #00299e;
   color: #fff;
 }
@@ -306,7 +306,7 @@ p {
   font-family: nexaregular;
   font-size: 16px;
   line-height: 30px;
-  color: #1A1A1A;
+  color: #868686;
   letter-spacing: 1.8px;
   font-weight: 500;
 }
@@ -596,6 +596,7 @@ header .enquire {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
+  border-radius: 5px;
 }
 @media (max-width: 700px) {
   header {
@@ -1876,6 +1877,7 @@ button.slick-next.slick-arrow {
 }
 .cases-cards .h1 {
   margin-bottom: 22px;
+  font-size: 48px;
 }
 .h1 {
   font-size: 48px;
@@ -3773,6 +3775,36 @@ button.slick-next.slick-arrow {
   background-position: 7px;
   background-size: 40px auto;
 }
+.important-text.two-cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-left: 0;
+}
+ul.important-text,
+ol.important-text {
+  margin: 48px 0;
+  max-width: none;
+  list-style: none;
+}
+.important-text.two-cols li {
+  width: 40%;
+  padding-right: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+ul.important-text li,
+ol.important-text li {
+  padding-left: 60px;
+  margin: 0 0 40px;
+  background: url(/assets/resources/img/list-bullet-large.svg);
+  background-repeat: no-repeat;
+  background-position: 7px;
+  background-size: 40px auto;
+}
 .net-s {
   background: #f8f8f8;
   padding: 5% 0px;
@@ -3954,6 +3986,25 @@ button.slick-next.slick-arrow {
 .net-s4 ul {
   margin-top: 5%;
 }
+.blue-pint h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: #717171;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+.blue-pint .fnt li {
+  padding-bottom: 20px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 2em;
+  font-weight: 500;
+  position: relative;
+  text-transform: capitalize;
+  color: #666666;
+  font-family: nexaregular;
+}
 .blue-pint ul {
   list-style: none;
   margin-top: 40px;
@@ -4070,12 +4121,74 @@ button.slick-next.slick-arrow {
   width: 30%;
 }
 .wooC .woo-box h6 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.6em;
+}
+.m-w {
+  width: 100%;
+  margin-top: 15px;
+}
+.testimo {
+  padding: 5% 0;
+  background: #f8f8f8;
+}
+.testimo .p-l {
+  padding-left: 20%;
+}
+.testimo .t1 {
+  margin-bottom: 30px;
+  position: relative;
+}
+.testimo .t1:after {
+  content: '"';
+  position: absolute;
+  font-size: 110px;
+  top: -20px;
+  left: -90px;
+  font-style: italic;
+  font-weight: 500;
+}
+.testimo .right-l {
+  position: relative;
+  left: 60px;
+}
+.testimo h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.hh6 h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+.three .two-cols li {
+  width: 20%;
+  padding-right: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.new-u {
+  list-style: none;
+  padding: 0;
+}
+.new-u li {
+  text-transform: uppercase;
+  letter-spacing: 1px ;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .tally {
   margin-bottom: 8%;
@@ -4309,7 +4422,7 @@ button.slick-next.slick-arrow {
 }
 .cols-text-slider .swiper-slide {
   color: #8691A8;
-  width: 277px;
+  width: 390px;
   max-width: calc(100% - 50px);
 }
 .cols-text-slider .swiper-slide .title {
