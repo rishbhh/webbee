@@ -199,7 +199,7 @@ $(document).ready(function () {
             }
         })
     });
-    $body = $(".hero-section, .banner-section"),
+    $body = $(".hero-section, .banner-section, .banner-inner"),
         elem_1 = $(".elements .el1"),
         elem_2 = $(".elements .el2"),
         elem_3 = $(".elements .el3");

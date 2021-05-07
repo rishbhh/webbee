@@ -565,6 +565,22 @@ line-height: 1.6em;
 .p-4{
 	padding-right: 30%;
 }
+.p-4{
+	position: relative;
+	.dots-container.static {
+		background-image: url(/assets/resources/img/dots-bg.png);
+		background-position: 0 0;
+		background-repeat: repeat;
+		background-size: cover;
+		opacity: 0.2;
+		position: absolute;
+		width: 360px;
+		height: 140px;
+		display: block;
+		top: 0;
+		right: 370px;
+	}
+}
 .right-l{
 	position: relative;
 a{
@@ -622,12 +638,27 @@ a{
 		}
 	}
 }
-
+.left-el{
+	position: relative;
+	.dots-container.static {
+		background-image: url(/assets/resources/img/dots-bg.png);
+		background-position: 0px 0px;
+		background-repeat: repeat;
+		background-size: cover;
+		opacity: 0.2;
+		position: absolute;
+		width: 360px;
+		height: 140px;
+		display: block;
+		top: -20px;
+		left: -20px;
+	}
+}
 // New Slider
 /*Technologies box*/
 
 .technologies-box {
-	margin: 50px 0 128px;
+	margin: 100px 0 128px;
 }
 
 
@@ -650,7 +681,22 @@ a{
 	width: 42.38249594813614%;
 	margin: -5px 0 0;
 }
-
+.specification-box .title-box {
+	position: relative;
+	.dots-container.static {
+		background-image: url(/assets/resources/img/dots-bg.png);
+		background-position: 0px 0px;
+		background-repeat: repeat;
+		background-size: cover;
+		opacity: 0.2;
+		position: absolute;
+		width: 300px;
+		height: 150px;
+		display: block;
+		top: -10px;
+		left: -20px;
+	}
+}
 .specification-box .title-box>*:first-child {
 	margin-top: 0;
 }
