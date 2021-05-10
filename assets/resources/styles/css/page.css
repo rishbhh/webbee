@@ -2476,6 +2476,47 @@ button.slick-next.slick-arrow {
 .edi-s .steps-flex2 :nth-child(3) {
   padding-right: 0;
 }
+.edi-s .steps-flex3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+}
+.edi-s .steps-flex3 :last-child {
+  padding-right: 0;
+}
+.edi-s .steps-flex3 .edii {
+  width: 30%;
+  padding-right: 12rem;
+  border-left: 8px solid #00299E;
+  margin-bottom: 70px;
+  padding-left: 20px;
+}
+.edi-s .steps-flex3 .edii .big {
+  font: normal normal bold 94px/40px Montserrat;
+  letter-spacing: 4.7px;
+  color: #000000;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+.edi-s .steps-flex3 .edii .small {
+  text-align: left;
+  font: normal normal 24px/40px Montserrat;
+  letter-spacing: 1.2px;
+  color: #000000;
+  margin-top: 31px;
+  margin-bottom: 0;
+}
+.edi-s .steps-flex3 .edii p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+.edi-s .steps-flex3 .edii .p-right {
+  padding-right: 0;
+}
 .edi-s .edii {
   width: 20%;
   padding-right: 12rem;
@@ -2492,7 +2533,7 @@ button.slick-next.slick-arrow {
 }
 .edi-s .edii .small {
   text-align: left;
-  font: normal normal bold 24px/40px Montserrat;
+  font: normal normal 24px/40px Montserrat;
   letter-spacing: 1.2px;
   color: #000000;
   margin-top: 31px;
@@ -4595,6 +4636,20 @@ ol.important-text li {
 }
 .edi .left-p {
   padding-left: 10%;
+}
+.edi-s {
+  margin-top: 0;
+}
+.edi-s h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.edi-s .sub-p {
+  text-align: left;
+  margin-top: 0;
 }
 .cta-flex {
   text-align: center;
