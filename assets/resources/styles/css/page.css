@@ -4637,6 +4637,12 @@ ol.important-text li {
 .edi .left-p {
   padding-left: 10%;
 }
+.bg-img {
+  background-image: url(/assets/resources/img/quickbooks.png);
+  background-size: cover;
+  height: 160px;
+  margin-top: 101px;
+}
 .edi-s {
   margin-top: 0;
 }
