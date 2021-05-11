@@ -380,6 +380,7 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
 }
 .main-heading:after {
   content: '';
@@ -387,7 +388,11 @@ h2 {
   width: 119px;
   height: 4px;
   background: #154df1;
-  transform: translate(-185%, 58px);
+  /* transform: translate(-185%, 58px); */
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 .container {
   width: 100%;
@@ -672,7 +677,7 @@ header .enquire {
   header nav {
     display: flex;
     text-align: center;
-    padding: 0 10px;
+    padding: 14px 10px;
   }
   header nav ul li {
     display: block;
@@ -1036,6 +1041,9 @@ header .enquire {
     height: auto;
     padding-bottom: 60px;
     margin-top: 15%;
+  }
+  .hero-section .button {
+    left: 80px;
   }
   .hero-section .left-content p {
     font-size: 1.2rem;
@@ -1620,7 +1628,8 @@ header .enquire {
   background: #154df1;
   transform: translate(0, 0);
   left: 0;
-  top: -10px;
+  bottom: -10px;
+  right: auto;
 }
 .part-logo {
   margin-top: 8%;
@@ -1672,6 +1681,44 @@ header .enquire {
 .about_bee-heading {
   padding-bottom: 18px;
 }
+@media only screen and (max-width: 767px) {
+  .banner-section {
+    display: block;
+    margin-top: 50px;
+  }
+  .banner-section .left-content {
+    width: 100%;
+  }
+  .banner-section .right-image img {
+    width: 100%;
+  }
+  .banner-section .left-content h1 {
+    font-weight: 300;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-right: 0px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .about-off .flex-about {
+    display: block;
+  }
+  .about-off .flex-about .img-box {
+    padding-right: 0;
+  }
+  .about-off .flex-about .img-box img {
+    width: 100%;
+  }
+  .about-off .flex-about .about-con {
+    margin-top: 30px;
+  }
+  .collag .collage-block {
+    display: block;
+  }
+}
 .brands {
   background: #fbfbfb;
   padding: 8% 0px;
@@ -1694,7 +1741,9 @@ header .enquire {
   width: 119px;
   height: 4px;
   background: #154df1;
-  transform: translate(-454%, -62px);
+  /* transform: translate(-454%, -62px); */
+  left: 0;
+  right: auto;
 }
 .brands .brands-logo {
   box-sizing: border-box;
@@ -1725,9 +1774,6 @@ header .enquire {
 .clients-slider .slick-prev,
 .clients-slider .slick-next {
   display: none !important;
-}
-.clients-slider .main-heading:after {
-  transform: translate(-339%, 58px);
 }
 .clients-slider .elements .el12 {
   background: url('/assets/resources/img/elemets-all.png') no-repeat -1412px -59px;
@@ -2493,7 +2539,7 @@ button.slick-next.slick-arrow {
   padding-left: 20px;
 }
 .edi-s .steps-flex3 .edii .big {
-  font: normal normal bold 94px/40px Montserrat;
+  font: normal normal bold 75px/20px Montserrat;
   letter-spacing: 4.7px;
   color: #000000;
   margin-top: 14px;
@@ -2525,7 +2571,7 @@ button.slick-next.slick-arrow {
   padding-left: 20px;
 }
 .edi-s .edii .big {
-  font: normal normal bold 94px/40px Montserrat;
+  font: normal normal bold 75px/20px Montserrat;
   letter-spacing: 4.7px;
   color: #000000;
   margin-top: 14px;
@@ -4638,7 +4684,6 @@ ol.important-text li {
   padding-left: 10%;
 }
 .bg-img {
-  background-image: url(/assets/resources/img/quickbooks.png);
   background-size: cover;
   height: 160px;
   margin-top: 101px;
@@ -5210,7 +5255,7 @@ h1 + *,
 @media screen and (max-width: 780px) {
   /*Independent*/
   .container {
-    padding: 0 20px;
+    padding: 0 0px;
   }
   /*Apllications section*/
   .applications-section {

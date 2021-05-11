@@ -90,7 +90,9 @@ function animateFrom(elem, direction) {
         y: 0,
         autoAlpha: 1,
         ease: "expo",
-        overwrite: "auto"
+        overwrite: "auto",
+        stagger:.2,
+        delay:0.4
     });
 }
 

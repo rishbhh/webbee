@@ -204,7 +204,8 @@ background-color: #fbfbfb;
         background: #154df1;
         transform: translate(0, 0);
         left: 0;
-        top: -10px;
+        bottom: -10px;
+        right: auto;
     }
 }
 .part-logo{
@@ -265,4 +266,48 @@ background-color: #fbfbfb;
 
 .about_bee-heading{
     padding-bottom: 18px;
+}
+@media @m_screen{
+    .banner-section{
+        display: block;
+        margin-top: 50px;
+        .left-content {
+            width: 100%;
+        }
+        .right-image img {
+            width: 100%;
+        }
+        .left-content h1 {
+            font-weight: 300;
+            line-height: 1.6em;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-right: 0px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+
+    .about-off {
+        .flex-about{
+            display: block;
+            .img-box {
+                padding-right: 0;
+                img{
+                    width: 100%;
+                }
+            }
+            .about-con{
+                margin-top: 30px;
+            }
+    }
+}
+
+.collag{
+    .collage-block{
+        display: block;
+    }
+}
 }
