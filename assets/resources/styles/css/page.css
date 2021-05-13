@@ -430,9 +430,24 @@ body {
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
+  .banner-section p {
+    padding-right: 0px !important;
+    text-align: center;
+  }
   .dots-container.static,
   .elements {
     display: none !important;
+  }
+  .main-heading {
+    font-size: 2rem;
+  }
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow: hidden;
+  }
+  .flex-container {
+    display: block;
   }
 }
 .fixed {
@@ -1645,6 +1660,13 @@ header .enquire {
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
+  .part-logo {
+    margin-top: 8%;
+  }
+  .part-logo .flex-item {
+    width: 95%;
+    margin-bottom: 20px;
+  }
   .about-bee .solution {
     display: flex;
     flex-direction: column-reverse;
@@ -1664,6 +1686,19 @@ header .enquire {
   .content-left h2 {
     font-size: 1.7rem !important;
     line-height: 2.4rem !important;
+  }
+  .partners {
+    padding: 8% 20px;
+  }
+  .partners .main-heading {
+    text-align: center;
+    padding-right: 0rem;
+    position: relative;
+  }
+  .partners .main-heading:after {
+    left: 0;
+    bottom: -10px;
+    right: 0;
   }
 }
 .overflow__cont {
@@ -1717,6 +1752,7 @@ header .enquire {
   }
   .collag .collage-block {
     display: block;
+    width: 100%;
   }
 }
 .brands {
@@ -1761,10 +1797,17 @@ header .enquire {
   .brands .main-heading {
     text-align: center;
     padding-right: 0rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .brands .main-heading:after {
+    left: 0;
+    right: 0;
   }
   .brands .flex-item {
-    width: 196px;
+    width: 145px;
+    margin-bottom: 30px;
+    line-height: 10px;
   }
 }
 .clients-slider {
@@ -2212,12 +2255,18 @@ button.slick-next.slick-arrow {
   }
   .card-holder {
     margin-right: 30px;
+    padding-bottom: 113.5%;
   }
   .cases-row .text-col p {
     font-size: 19px;
   }
   .cases-cards {
     margin-bottom: 35px;
+  }
+  .talk-message-box .message-icon {
+    right: 0 ;
+    left: 0;
+    margin: 0 auto;
   }
   .talk-message-box-content {
     flex-direction: column;
@@ -3188,6 +3237,59 @@ button.slick-next.slick-arrow {
 .contact-list a:hover {
   color: #3f60fa;
 }
+@media only screen and (max-width: 767px) {
+  .location-col.prime-col .card-description {
+    width: 89%;
+    max-width: 100%;
+  }
+  .location-holder {
+    margin-top: 20px;
+  }
+  .card-description {
+    bottom: -90px;
+  }
+  .contact-s1 .inner-div {
+    display: block;
+  }
+  .location-row {
+    display: block;
+  }
+  .location-col {
+    padding: 0;
+  }
+  .location-col.prime-col .card-holder {
+    padding-bottom: 127.5%;
+  }
+  .location-col.prime-col {
+    margin-bottom: 50px;
+  }
+  .location-col .card {
+    max-width: 100%;
+    width: 90%;
+  }
+  .location-col {
+    margin-bottom: 100px;
+  }
+  .location-col h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .location-col .address {
+    display: block;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.7;
+    margin-bottom: -8px;
+  }
+  .location-col .case-card {
+    width: 100%;
+  }
+  .location-col .location-descr {
+    position: relative;
+    left: 0;
+  }
+}
 .career-s1 {
   margin-top: 5%;
   margin-bottom: 10%;
@@ -3295,6 +3397,89 @@ button.slick-next.slick-arrow {
 .hiring .contents .box-sh .apply:hover:after {
   top: 0;
   left: 0;
+}
+@media only screen and (max-width: 767px) {
+  .hiring .contents {
+    display: block;
+  }
+  .hiring .contents .box-sh {
+    padding: 10px 20px;
+    margin-right: 0px;
+    width: 86%;
+    margin-bottom: 30px;
+  }
+  .hiring .contents .box-sh h5 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 25px 0 0 0;
+  }
+  .hiring .contents .box-sh .sub-h {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #1233FF;
+    margin: 10px 0 34px 0;
+  }
+  .hiring .contents .box-sh p {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  .hiring .contents .box-sh .apply {
+    font-size: 11px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-indent: 0.44em;
+    border: none;
+    background: #1a40ff;
+    /* height: 55px; */
+    padding: 10px 20px;
+    line-height: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: 0px;
+    z-index: 0;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  .hiring .contents .box-sh .apply:after {
+    content: "";
+    background-color: rgba(26, 64, 255, 0.47);
+    transition: all 0.1s linear;
+    width: 100%;
+    height: 46px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: -1;
+  }
+  .hiring .contents .box-sh .apply:hover {
+    animation: btn_anim 1.2s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  .hiring .contents .box-sh .apply:hover:after {
+    top: 0;
+    left: 0;
+  }
+  .career-s1 h2 {
+    line-height: 40px;
+    text-align: center;
+  }
+  .career-s1 .contents {
+    display: block;
+    align-items: center;
+  }
+  .career-s1 .contents .box-sh {
+    width: 88%;
+    padding-top: 6px;
+  }
+  .career-s1 .contents .box-sh h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .sub-hd {
   font-size: 1.3rem;

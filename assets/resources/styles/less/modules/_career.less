@@ -106,3 +106,91 @@ margin-bottom: 10%;
         }
     }
 }
+@media @m_screen{
+    .hiring{
+       
+            .contents{
+                display: block;
+                .box-sh{
+                    padding: 10px 20px;
+                    margin-right: 0px;
+                    width: 86%;
+                    margin-bottom: 30px;
+                  h5{
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin: 25px 0 0 0;
+                  }
+                  .sub-h{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    letter-spacing: 0.6px;
+                    color: #1233FF;
+                    margin: 10px 0 34px 0;
+                }
+                p{
+                    font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            font-weight: bold;
+                }
+                .apply {
+                    font-size: 11px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-indent: 0.44em;
+                    border: none;
+                    background: #1a40ff;
+                    /* height: 55px; */
+                    padding: 10px 20px;
+                    line-height: 25px;
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    margin-left: 0px;
+                    z-index: 0;
+                    margin-top: 5%;
+                    margin-bottom: 10%;
+                }
+                .apply:after {
+                    content: "";
+                    background-color: rgba(26, 64, 255, 0.47);
+                    transition: all 0.1s linear;
+                    width: 100%;
+                    height: 46px;
+                    position: absolute;
+                    left: 8px;
+                    top: 8px;
+                    z-index: -1;
+                }
+                .apply:hover {
+                    animation: btn_anim 1.2s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+                }
+                .apply:hover:after {
+                    top: 0;
+                    left: 0;
+                }
+                }
+            }
+        }
+        .career-s1{
+            h2 {
+                line-height: 40px;
+                text-align: center;
+            }
+            .contents {
+                display: block;
+                align-items: center;
+                .box-sh{
+                    width: 88%;
+                    padding-top: 6px;
+                    h6{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+}
