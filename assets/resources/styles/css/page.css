@@ -449,6 +449,10 @@ body {
   .flex-container {
     display: block;
   }
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 40px;
+  }
 }
 .fixed {
   background: #fff;
@@ -2240,6 +2244,12 @@ button.slick-next.slick-arrow {
   vertical-align: middle;
 }
 @media only screen and (max-width: 767px) {
+  .banner-section {
+    height: 60vh;
+  }
+  .case-std .card-description {
+    bottom: -30px;
+  }
   .cases-row {
     flex-direction: column;
     padding: 0 20px;
@@ -2818,6 +2828,19 @@ button.slick-next.slick-arrow {
   font-size: 18px;
   color: #000;
   font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .imact .important-text.two-cols li {
+    width: 36% !important;
+    padding-left: 0px;
+  }
+  .liner .products-list-in-brief {
+    display: block !important;
+  }
+  .liner .products-list-in-brief .product-in-brief {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
 }
 .contact-s1 {
   padding: 5% 0;
@@ -3595,6 +3618,51 @@ button.slick-next.slick-arrow {
   opacity: 1;
   bottom: 20px;
 }
+@media only screen and (max-width: 767px) {
+  .stories .contents {
+    display: block;
+  }
+  .stories .box-sh {
+    height: 100% !important;
+    width: 90% !important;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+  }
+  .stories .box-sh img {
+    margin-top: 0px !important;
+    width: 120px;
+  }
+  .stories .box-sh .read-more {
+    position: relative !important;
+    bottom: 0 !important;
+    opacity: 1 !important;
+  }
+  .stories .box-sh::before {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+  .stories .box-sh::after {
+    background: #1233FF !important;
+    height: 4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sd_scroll {
+    max-height: 450px;
+  }
+  .clien .sdCustomSliderHeadig {
+    font-size: 1.1em !important;
+  }
+  .sdAllContent {
+    text-align: center;
+  }
+  .brands .brands-logo {
+    display: block;
+  }
+  .brands-logo .flex-container {
+    display: flex;
+  }
+}
 .clients-slider .link {
   margin-top: 20px;
 }
@@ -3667,7 +3735,7 @@ button.slick-next.slick-arrow {
   position: absolute;
   left: -30px;
   top: 7px;
-  border: solid 2px #141414;
+  border: solid 2px #666666;
   border-radius: 18px;
   -moz-border-radius: 8px;
   /* -webkit-border-radius: 8px; */
@@ -3682,10 +3750,19 @@ button.slick-next.slick-arrow {
   width: 7px;
   height: 7px;
   border-radius: 50px;
-  background: #141414;
+  background: #666666;
 }
 .terms .contents .po {
   padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  .terms .contents {
+    padding: 10px 15px;
+  }
+  .point p {
+    font-size: 16px;
+    color: #666666;
+  }
 }
 .custom-model-main {
   text-align: center;
@@ -4016,6 +4093,27 @@ button.slick-next.slick-arrow {
 }
 .part-s3 .flex-2 .item-f h2 {
   font-size: 1.3em;
+}
+@media only screen and (max-width: 767px) {
+  .part {
+    display: block;
+  }
+  .part-s2 .for-box {
+    display: block;
+  }
+  .part-s2 .refer {
+    width: 88% !important;
+  }
+  .part-s3 .flex-2 {
+    display: block;
+  }
+  .part-s3 .flex-2 .item-f {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .part-s3 .flex-2 .item-f h2 {
+    margin-bottom: 10px;
+  }
 }
 .liner {
   background: #fbfbfb;
@@ -5438,6 +5536,35 @@ h1 + *,
   }
 }
 @media screen and (max-width: 780px) {
+  .net-s .important-text.two-cols {
+    display: block;
+  }
+  .net-s .important-text.two-cols li {
+    width: 100%;
+  }
+  .custm .important-text.two-cols {
+    display: block;
+  }
+  .custm .important-text.two-cols li {
+    width: 100% !important;
+  }
+  .edi-s3 .important-text.two-cols {
+    display: block;
+  }
+  .edi-s3 .important-text.two-cols li {
+    width: 90%;
+  }
+  .edi-s4 .logos-sec li {
+    width: 24%;
+    padding-right: 40px;
+  }
+  .company-d .important-text.two-cols li {
+    width: 99%;
+    padding-right: 0px;
+  }
+  .liner .product-in-brief .h2 {
+    font-size: 27px;
+  }
   /*Independent*/
   .container {
     padding: 0 0px;
