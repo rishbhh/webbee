@@ -91,8 +91,8 @@ function animateFrom(elem, direction) {
         autoAlpha: 1,
         ease: "expo",
         overwrite: "auto",
-        stagger:.2,
-        delay:0.4
+        stagger: .2,
+        delay: 0.4
     });
 }
 
@@ -114,10 +114,38 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
+var tl11 = gsap.timeline({ default: { duration: .9, ease: Back.easeOut.config(2), opacity: 0 } })
+tl11.from(".card-bg", {
+    delay: 1,
+    y: 500,
+    transformorigin: 'center'
+}, "-=.2")
+    .from(".card2", {
+        opacity: 0,
+        transformorigin: 'center',
+        y: 500
+    }, "-=.4")
+    .from(".card3", {
+        opacity: 0,
+        transformorigin: 'center',
+        y: 500
+    })
+    .from(".card4", {
+        opacity: 0,
+        transformorigin: 'center',
+        y: 500
+    })
+    .from(".logoo", {
+        opacity: 0,
+        transformorigin: 'center',
+        y: 500
+    }, "-=.7")
 $(document).ready(function () {
 
     $(".Click-here").on('click', function () {
+        $(".custom-model-main").addClass('model-open');
+    });
+    $(".apply").on('click', function () {
         $(".custom-model-main").addClass('model-open');
     });
     $(".close-btn, .bg-overlay").click(function () {
