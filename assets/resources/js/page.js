@@ -113,7 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-var tl11 = gsap.timeline({ default: { duration: .7, ease: Back.easeOut.config(2), opacity: 0 } })
+var tl11 = gsap.timeline({ default: { duration: 0.1, ease: Back.easeOut.config(2), opacity: 0 } })
+var tl2 = gsap.timeline({defaults:{duration: 1.5, delay:3}})
+var tl3 = gsap.timeline({defaults:{duration:.5}})
 tl11.from(".rect1", {
     delay: 0.8,
     xPercent: -50, left: "50%", top: "50%",
@@ -128,30 +130,45 @@ tl11.from(".rect1", {
         transformOrigin: "top center",
         opacity: 0,
     }, "-=.1")
-// .from(".card-bg", {
-//     delay: 1,
-//     y: 500,
-// })
-// .from(".card2", {
-//     opacity: 0,
-//     transformorigin: 'center',
-//     y: 500
-// }, "-=.4")
-// .from(".card3", {
-//     opacity: 0,
-//     transformorigin: 'center',
-//     y: 500
-// })
-// .from(".card4", {
-//     opacity: 0,
-//     transformorigin: 'center',
-//     y: 500
-// })
-// .from(".logoo", {
-//     opacity: 0,
+.from(".card-bg", {
+    delay: .1,
+    yPercent: -100, left: "50%", top: "50%",
+    transformOrigin: "top center",
+    opacity: 0,
+},"-=.2")
+.from(".card2", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+}, "=.3")
+.from(".card3", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+}, "=.4")
+.from(".card4", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+}, "=.5")
+.from(".logoo", {
+    transformOrigin: "bottom center",
+    opacity: 0,
+}, "=.5")
+.from(".ract3", {
+    yPercent: 50, left: "50%", top: "50%",
+    transformOrigin: "top center",
+    opacity: 0,
+}, "-=.1")
+.from(".rct", {
+    yPercent: -50, left: "50%", top: "50%",
+    opacity: 0,
+    scaleY:0,
+    transformOrigin:'top center',
+}, "=.2")
 
-//     y: 500
-// }, "-=.7")
+tl2.to(".whole-card", {y: 5, repeat: -1, yoyo:true})
+tl3.from(".main-content", { opacity: 0, y: 40, stagger: .3})
 $(document).ready(function () {
 
     $(".Click-here").on('click', function () {
@@ -241,7 +258,7 @@ $(document).ready(function () {
             }
         })
     });
-    $body = $(".hero-section, .banner-section, .banner-inner"),
+    $body = $(" .banner-section, .banner-inner"),
         elem_1 = $(".elements .el1"),
         elem_2 = $(".elements .el2"),
         elem_3 = $(".elements .el3");
