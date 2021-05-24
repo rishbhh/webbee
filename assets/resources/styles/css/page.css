@@ -965,13 +965,14 @@ header .enquire {
   font-size: 15px;
   line-height: 1;
   color: #fff;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.1em;
   background: #2d52cf;
+  text-transform: uppercase;
   padding: 17px 0 17px;
   cursor: pointer;
   border: 0;
   border-radius: 2px;
-  min-width: 140px;
+  min-width: 160px;
   overflow: hidden;
   text-align: center;
   position: absolute;
@@ -4114,6 +4115,17 @@ button.slick-next.slick-arrow {
   .part-s3 .flex-2 .item-f h2 {
     margin-bottom: 10px;
   }
+}
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 99999;
+  background: cornflowerblue;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .liner {
   background: #fbfbfb;

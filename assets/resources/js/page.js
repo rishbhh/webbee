@@ -68,7 +68,7 @@
 //     }
 // }
 
-
+  
 function animateFrom(elem, direction) {
     direction = direction || 1;
     var x = 0,
@@ -89,7 +89,7 @@ function animateFrom(elem, direction) {
         autoAlpha: 1,
         ease: "expo",
         overwrite: "auto",
-        stagger: .2,
+        stagger: .3,
         delay: 0.4
     });
 }
