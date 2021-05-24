@@ -2164,6 +2164,9 @@ button.slick-next.slick-arrow {
 .m-b {
   margin-bottom: 10%;
 }
+.case-s {
+  margin-top: 10%;
+}
 .talk-message-box {
   max-width: 785px;
   margin: auto;
@@ -2250,6 +2253,7 @@ button.slick-next.slick-arrow {
   }
   .case-std .card-description {
     bottom: -30px;
+    width: 100%;
   }
   .cases-row {
     flex-direction: column;
@@ -3933,9 +3937,17 @@ button.slick-next.slick-arrow {
     height: 100%;
   }
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 767px) {
   .custom-model-inner {
     margin-top: 45px;
+  }
+  .pop-up-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .pop-up-content-wrap img {
+    display: none;
   }
 }
 .uper {
@@ -4116,16 +4128,183 @@ button.slick-next.slick-arrow {
     margin-bottom: 10px;
   }
 }
-.preloader {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 99999;
-  background: cornflowerblue;
-  top: 0;
-  bottom: 0;
+/* Load Settings */
+.no-scroll-y {
+  overflow-y: hidden;
+}
+#preloader-section {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Preloader */
+.ctn-preloader {
+  align-items: center;
+  /* Show or Hide cursor when hover of Preloader*/
+  cursor: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
   left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.ctn-preloader .animation-preloader {
+  position: absolute;
+  z-index: 100;
+}
+/* Spinner loading */
+.ctn-preloader .animation-preloader .spinner {
+  animation: spinner 1s infinite linear;
+  border-radius: 50%;
+  border: 3px solid #1a40ff25;
+  border-top-color: #1a40ff;
+  /* It is not identified in alphabetical order so that it does not overwrite it */
+  height: 9em;
+  margin: 0 auto 3.5em auto;
+  width: 9em;
+}
+/* Text Loading */
+.ctn-preloader .animation-preloader .txt-loading {
+  font: bold 5em 'Montserrat', sans-serif;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+  animation: letters-loading 4s infinite;
+  color: #1a40ff;
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateY(-90deg);
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+/* Letters Animation */
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+  animation-delay: 0.2s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+  animation-delay: 0.4s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+  animation-delay: 0.6s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+  animation-delay: 0.8s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+  animation-delay: 1s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+  animation-delay: 1.2s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+  animation-delay: 1.4s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+  animation-delay: 1.6s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {
+  animation-delay: 1.8s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before {
+  animation-delay: 2s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(12):before {
+  animation-delay: 2.2s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(13):before {
+  animation-delay: 2.4s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(14):before {
+  animation-delay: 2.6s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(15):before {
+  animation-delay: 2.8s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(16):before {
+  animation-delay: 3s;
+}
+/* Loader section Settings */
+.ctn-preloader .loader-section {
+  background-color: #ffffff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: calc(50% + 1px);
+}
+.ctn-preloader .loader-section.section-left {
+  left: 0;
+}
+.ctn-preloader .loader-section.section-right {
   right: 0;
+}
+/* Fade effect in loading animation */
+.loaded .animation-preloader {
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+/* Curtain effect */
+.loaded .loader-section.section-left {
+  transform: translateX(-101%);
+  transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2);
+}
+.loaded .loader-section.section-right {
+  transform: translateX(101%);
+  transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2);
+}
+/* Preloader Animation */
+@keyframes spinner {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/* Animation of the letters loading from the preloader */
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+/* Backward laptop size (laptop, tablet, cell phone) */
+@media screen and (max-width: 767px) {
+  /* Preloader */
+  /* Spinner Loading */
+  .ctn-preloader .animation-preloader .spinner {
+    height: 8em;
+    width: 8em;
+  }
+  /* Text Loading */
+  .ctn-preloader .animation-preloader .txt-loading {
+    font: bold 3.5em 'Montserrat', sans-serif;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* Prelaoder */
+  /* Spinner Loading */
+  .ctn-preloader .animation-preloader .spinner {
+    height: 7em;
+    width: 7em;
+  }
+  /* Text Loading */
+  .ctn-preloader .animation-preloader .txt-loading {
+    font: bold 2em 'Montserrat', sans-serif;
+  }
 }
 .liner {
   background: #fbfbfb;

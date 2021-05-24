@@ -9,9 +9,39 @@
     <link href="assets/resources/styles/css/page.css" type="text/css" rel="stylesheet" />
 </head>
 
-<body>
-    <section class="viewport">
-        <div id="scroll-container" class="scroll-container">
+<body id="page-top" class="no-scroll-y">
+     <!-- Start: Preloader -->
+  <section id="preloader-section">
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                
+                <!-- Spinner -->
+                <div class="spinner"></div>
+                
+                <!-- Start: Text Loading -->
+                <div class="txt-loading">
+                    <span data-text-preloader="W" class="letters-loading">W</span>
+                    <span data-text-preloader="E" class="letters-loading">E</span>
+                    <span data-text-preloader="B" class="letters-loading">B</span>
+                    <span data-text-preloader="B" class="letters-loading">B</span>
+                    <span data-text-preloader="E" class="letters-loading">E</span>
+                    <span data-text-preloader="E" class="letters-loading">E</span>
+
+                </div>
+                <!-- End: Text Loading -->
+
+            </div>
+
+            <!-- Start: Preloader sides - Model 1 -->
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+            <!-- End: Preloader sides - Model 1 -->
+
+        </div>
+    </div>
+</section>
+<!-- End: Preloader -->
             <header>
                 <nav>
                     <div class="hamburger-menu">
@@ -1013,7 +1043,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="cases-cards">
+                    <section class="cases-cards case-std">
                         <div class="container">
                             <div class="cases-row viewport-section">
                                 <div class="text-col">
@@ -1228,8 +1258,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
             <script src="assets/resources/js/page.js"></script>
-        </div>
-    </section>
+        
     <div class="custom-model-main">
         <div class="custom-model-inner">
             <div class="close-btn">×</div>

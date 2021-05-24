@@ -67,6 +67,118 @@
 //         requestId = requestAnimationFrame(updateScroller);
 //     }
 // }
+$(document).ready(preloderFunction());
+    
+    
+    
+function preloderFunction() {
+  
+    setTimeout(function() {
+        
+        // Force Main page to show from the Start(Top) even if user scroll down on preloader - Primary (Before showing content)
+       
+        // Model 1 - Fast            
+        // document.getElementById("page-top").scrollIntoView();
+        
+        // Model 2 - Smooth             
+        // document.getElementById("page-top").scrollIntoView({behavior: 'smooth'});
+                
+        
+    
+        
+        // Removing Preloader:
+        
+        $('#ctn-preloader').addClass('loaded');  
+        // Once the preloader has finished, the scroll appears 
+        $('body').removeClass('no-scroll-y');
+
+        if ($('#ctn-preloader').hasClass('loaded')) {
+            // It is so that once the preloader is gone, the entire preloader section will removed
+            $('#preloader').delay(1000).queue(function() {
+                $(this).remove();
+                
+                // If you want to do something after removing preloader:
+                afterLoad();
+                
+            });
+        }
+    }, 2000);
+}
+
+
+
+function afterLoad() {
+    // After Load function body!
+ 
+        $(".wrapper").delay(3000).fadeIn(500);
+        var tl11 = gsap.timeline({ default: { duration: 0.1, ease: Back.easeOut.config(2), opacity: 0 } })
+var tl2 = gsap.timeline({defaults:{duration: 1.5, delay:3}})
+var tl3 = gsap.timeline({defaults:{duration:0.5}})
+tl11.from(".rect1", {
+    delay: 0.8,
+    xPercent: -50, left: "50%", top: "50%",
+    opacity: 0,
+    duration:0.4
+}, "=.2")
+    .from(".rect-shd", {
+        xPercent: -50, left: "50%", top: "50%",
+        opacity: 0,
+        duration:0.4
+    }, "=.3")
+    .from(".ract2", {
+        yPercent: -100, left: "50%", top: "50%",
+        transformOrigin: "top center",
+        opacity: 0,
+        duration:0.4
+    }, "-=.1")
+.from(".card-bg", {
+    delay: .1,
+    yPercent: -100, left: "50%", top: "50%",
+    transformOrigin: "top center",
+    opacity: 0,
+    duration:0.4
+},"-=.2")
+.from(".card2", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+    duration:0.4
+}, "=.3")
+.from(".card3", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+    duration:0.4
+}, "=.4")
+.from(".card4", {
+    yPercent: 100, left: "50%", top: "50%",
+    transformOrigin: "bottom center",
+    opacity: 0,
+    duration:0.4
+}, "=.5")
+.from(".logoo", {
+    transformOrigin: "bottom center",
+    opacity: 0,
+    duration:0.4
+}, "=.5")
+.from(".ract3", {
+    yPercent: 50, left: "50%", top: "50%",
+    transformOrigin: "top center",
+    opacity: 0,
+    duration:0.4
+}, "-=.1")
+.from(".rct", {
+    yPercent: -50, left: "50%", top: "50%",
+    opacity: 0,
+    transformOrigin:'top center',
+    duration:0.4
+}, "=.2")
+
+tl2.to(".whole-card", {y: 5, repeat: -1, yoyo:true})
+tl3.from(".main-content", { opacity: 0, y: 40, stagger: .3})
+
+
+}
 
   
 function animateFrom(elem, direction) {
@@ -113,62 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-var tl11 = gsap.timeline({ default: { duration: 0.1, ease: Back.easeOut.config(2), opacity: 0 } })
-var tl2 = gsap.timeline({defaults:{duration: 1.5, delay:3}})
-var tl3 = gsap.timeline({defaults:{duration:.5}})
-tl11.from(".rect1", {
-    delay: 0.8,
-    xPercent: -50, left: "50%", top: "50%",
-    opacity: 0,
-}, "=.2")
-    .from(".rect-shd", {
-        xPercent: -50, left: "50%", top: "50%",
-        opacity: 0,
-    }, "=.3")
-    .from(".ract2", {
-        yPercent: -100, left: "50%", top: "50%",
-        transformOrigin: "top center",
-        opacity: 0,
-    }, "-=.1")
-.from(".card-bg", {
-    delay: .1,
-    yPercent: -100, left: "50%", top: "50%",
-    transformOrigin: "top center",
-    opacity: 0,
-},"-=.2")
-.from(".card2", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-}, "=.3")
-.from(".card3", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-}, "=.4")
-.from(".card4", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-}, "=.5")
-.from(".logoo", {
-    transformOrigin: "bottom center",
-    opacity: 0,
-}, "=.5")
-.from(".ract3", {
-    yPercent: 50, left: "50%", top: "50%",
-    transformOrigin: "top center",
-    opacity: 0,
-}, "-=.1")
-.from(".rct", {
-    yPercent: -50, left: "50%", top: "50%",
-    opacity: 0,
-    scaleY:0,
-    transformOrigin:'top center',
-}, "=.2")
-
-tl2.to(".whole-card", {y: 5, repeat: -1, yoyo:true})
-tl3.from(".main-content", { opacity: 0, y: 40, stagger: .3})
 $(document).ready(function () {
 
     $(".Click-here").on('click', function () {
@@ -258,7 +314,7 @@ $(document).ready(function () {
             }
         })
     });
-    $body = $(" .banner-section, .banner-inner"),
+    $body = $(" .banner-section, .banner-inner, .hero-section"),
         elem_1 = $(".elements .el1"),
         elem_2 = $(".elements .el2"),
         elem_3 = $(".elements .el3");
