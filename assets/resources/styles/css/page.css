@@ -125,6 +125,70 @@
   src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG7g4.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHx_Klwg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXH9fKlwg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHGfWlwg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHIPWlwg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkV2EL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkW-EL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkYODL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v18/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkbqDL7E.ttf) format('truetype');
+}
+@font-face {
   font-family: 'nexaregular';
   src: url('../../fonts//nexaregular-webfont.woff2') format('woff2'), url('../../fonts//nexaregular-webfont.woff') format('woff');
   font-weight: normal;
@@ -303,7 +367,7 @@ a {
   cursor: pointer;
 }
 p {
-  font-family: nexaregular;
+  font-family: 'Cabin', sans-serif;
   font-size: 16px;
   line-height: 30px;
   color: #666666;
@@ -315,6 +379,56 @@ a {
 }
 h2 {
   line-height: 50px;
+}
+.cursor {
+  position: fixed;
+  background-color: #0035c5;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  -webkit-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+}
+.cursor.active {
+  opacity: 1;
+  transform: scale(0);
+}
+.cursor.menu-active {
+  opacity: 1;
+  transform: scale(0);
+}
+.cursor.hovered {
+  opacity: 1;
+}
+.cursor-follower {
+  position: fixed;
+  border: 1px solid #164dff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+  -webkit-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(2px, 2px);
+}
+.cursor-follower.active {
+  opacity: 1;
+  transform: scale(3);
+}
+.cursor-follower.menu-active {
+  opacity: 1;
+  transform: scale(3);
+}
+.cursor-follower.hovered {
+  opacity: 1;
 }
 .banner-inner {
   display: block;
@@ -425,6 +539,60 @@ h2 {
   font-size: 3em;
   text-align: center;
 }
+.load__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  top: 0;
+  overflow: hidden;
+}
+.loader__curve {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+}
+.loading__overlay {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 200%;
+  height: 100%;
+  max-width: none;
+  background-image: linear-gradient(to right, transparent, #000 50%, #000);
+}
+.load__inner {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+  flex-direction: column;
+  position: absolute;
+  z-index: 102;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+#loading__progress {
+  font-family: 'Big Shoulders Display', cursive;
+  color: #323232;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  text-indent: 0.08em;
+  margin-top: 20px;
+  position: relative;
+  transition: all 0.5s ease;
+  margin-left: -30px;
+}
+#loading__bar {
+  background-color: red;
+  width: 0;
+  height: 2px;
+  transition: all 0.5s ease;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -523,16 +691,6 @@ header nav ul .acount:hover .mega-acount {
 }
 header nav ul .acount:hover .mega-overlay {
   display: block;
-}
-header .mega-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  background: #ffffffb5;
-  /* filter: blur(8px); */
-  top: 91px;
-  display: none;
 }
 header .hamburger-menu,
 header .right-cta {
@@ -4129,9 +4287,6 @@ button.slick-next.slick-arrow {
   }
 }
 /* Load Settings */
-.no-scroll-y {
-  overflow-y: hidden;
-}
 #preloader-section {
   box-sizing: border-box;
   margin: 0;
@@ -4157,14 +4312,12 @@ button.slick-next.slick-arrow {
 }
 /* Spinner loading */
 .ctn-preloader .animation-preloader .spinner {
-  animation: spinner 1s infinite linear;
-  border-radius: 50%;
-  border: 3px solid #1a40ff25;
-  border-top-color: #1a40ff;
-  /* It is not identified in alphabetical order so that it does not overwrite it */
-  height: 9em;
+  animation: spinner 2s infinite linear;
+  border-radius: 0%;
+  border: 3px solid #1a40ff;
+  height: 7em;
   margin: 0 auto 3.5em auto;
-  width: 9em;
+  width: 7em;
 }
 /* Text Loading */
 .ctn-preloader .animation-preloader .txt-loading {
@@ -4235,7 +4388,7 @@ button.slick-next.slick-arrow {
 }
 /* Loader section Settings */
 .ctn-preloader .loader-section {
-  background-color: #ffffff;
+  background-color: transparent;
   height: 100%;
   position: fixed;
   top: 0;

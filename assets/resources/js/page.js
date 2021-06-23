@@ -1,186 +1,134 @@
 
-// var html = document.documentElement;
-// var body = document.body;
+gsap.timeline({}).to(".loading__overlay", {
+    xPercent: -300,
+    ease: "none",
+    duration: 1,
 
-// var scroller = {
-//     target: document.querySelector("#scroll-container"),
-//     ease: 0.05, // <= scroll speed
-//     endY: 0,
-//     y: 0,
-//     resizeRequest: 1,
-//     scrollRequest: 0,
-// };
-
-// var requestId = null;
-
-// TweenLite.set(scroller.target, {
-//     rotation: 0.01,
-//     force3D: true
-// });
-
-// window.addEventListener("load", onLoad);
-
-// function onLoad() {
-//     updateScroller();
-//     window.focus();
-//     window.addEventListener("resize", onResize);
-//     document.addEventListener("scroll", onScroll);
-// }
-
-// function updateScroller() {
-
-//     var resized = scroller.resizeRequest > 0;
-
-//     if (resized) {
-//         var height = scroller.target.clientHeight;
-//         body.style.height = height + "px";
-//         scroller.resizeRequest = 0;
-//     }
-
-//     var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-
-//     scroller.endY = scrollY;
-//     scroller.y += (scrollY - scroller.y) * scroller.ease;
-
-//     if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-//         scroller.y = scrollY;
-//         scroller.scrollRequest = 0;
-//     }
-
-//     TweenLite.set(scroller.target, {
-//         y: -scroller.y
-//     });
-
-//     requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
-// }
-
-// function onScroll() {
-//     scroller.scrollRequest++;
-//     if (!requestId) {
-//         requestId = requestAnimationFrame(updateScroller);
-//     }
-// }
-
-// function onResize() {
-//     scroller.resizeRequest++;
-//     if (!requestId) {
-//         requestId = requestAnimationFrame(updateScroller);
-//     }
-// }
-$(document).ready(preloderFunction());
-    
-    
-    
-function preloderFunction() {
-  
-    setTimeout(function() {
-        
-        // Force Main page to show from the Start(Top) even if user scroll down on preloader - Primary (Before showing content)
-       
-        // Model 1 - Fast            
-        // document.getElementById("page-top").scrollIntoView();
-        
-        // Model 2 - Smooth             
-        // document.getElementById("page-top").scrollIntoView({behavior: 'smooth'});
-                
-        
-    
-        
-        // Removing Preloader:
-        
-        $('#ctn-preloader').addClass('loaded');  
-        // Once the preloader has finished, the scroll appears 
-        $('body').removeClass('no-scroll-y');
-
-        if ($('#ctn-preloader').hasClass('loaded')) {
-            // It is so that once the preloader is gone, the entire preloader section will removed
-            $('#preloader').delay(1000).queue(function() {
-                $(this).remove();
-                
-                // If you want to do something after removing preloader:
-                afterLoad();
-                
-            });
-        }
-    }, 2000);
-}
-
-
-
-function afterLoad() {
-    // After Load function body!
- 
-        $(".wrapper").delay(3000).fadeIn(500);
-        var tl11 = gsap.timeline({ default: { duration: 0.1, ease: Back.easeOut.config(2), opacity: 0 } })
-var tl2 = gsap.timeline({defaults:{duration: 1.5, delay:3}})
-var tl3 = gsap.timeline({defaults:{duration:0.5}})
-tl11.from(".rect1", {
-    delay: 0.8,
-    xPercent: -50, left: "50%", top: "50%",
+}).to(".load__inner", {
     opacity: 0,
-    duration:0.4
-}, "=.2")
+    ease: "none"
+}, "ldn").to(".bluee", {
+    duration: 1,
+    attr: {
+        d: "M0 502S175 272 500 272s500 230 500 250V0H0Z"
+    },
+    ease: "power2.in"
+}, "-=.7").to(".bluee", {
+    duration: 1,
+    attr: {
+        d: "M0 2S175 1 500 1s500 1 500 1V0H0Z"
+    },
+    ease: "power2.out"
+}).to("#loading__main", {
+    height: "0",
+    duration: 1
+}, "-=1")
+    .from(".main-content", { opacity: 0, y: 40, duration: 0.4, stagger: .4 })
+    .from(".rect1", {
+        xPercent: -50, left: "50%", top: "50%",
+        opacity: 0,
+    }, "=.2")
     .from(".rect-shd", {
         xPercent: -50, left: "50%", top: "50%",
         opacity: 0,
-        duration:0.4
+
     }, "=.3")
     .from(".ract2", {
         yPercent: -100, left: "50%", top: "50%",
         transformOrigin: "top center",
         opacity: 0,
-        duration:0.4
+
     }, "-=.1")
-.from(".card-bg", {
-    delay: .1,
-    yPercent: -100, left: "50%", top: "50%",
-    transformOrigin: "top center",
-    opacity: 0,
-    duration:0.4
-},"-=.2")
-.from(".card2", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-    duration:0.4
-}, "=.3")
-.from(".card3", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-    duration:0.4
-}, "=.4")
-.from(".card4", {
-    yPercent: 100, left: "50%", top: "50%",
-    transformOrigin: "bottom center",
-    opacity: 0,
-    duration:0.4
-}, "=.5")
-.from(".logoo", {
-    transformOrigin: "bottom center",
-    opacity: 0,
-    duration:0.4
-}, "=.5")
-.from(".ract3", {
-    yPercent: 50, left: "50%", top: "50%",
-    transformOrigin: "top center",
-    opacity: 0,
-    duration:0.4
-}, "-=.1")
-.from(".rct", {
-    yPercent: -50, left: "50%", top: "50%",
-    opacity: 0,
-    transformOrigin:'top center',
-    duration:0.4
-}, "=.2")
+    .from(".card-bg", {
+        delay: .1,
+        yPercent: -100, left: "50%", top: "50%",
+        transformOrigin: "top center",
+        opacity: 0,
 
-tl2.to(".whole-card", {y: 5, repeat: -1, yoyo:true})
-tl3.from(".main-content", { opacity: 0, y: 40, stagger: .3})
+    }, "-=.2")
+    .from(".card2", {
+        yPercent: 100, left: "50%", top: "50%",
+        transformOrigin: "bottom center",
+        opacity: 0,
+
+    }, "=.3")
+    .from(".card3", {
+        yPercent: 100, left: "50%", top: "50%",
+        transformOrigin: "bottom center",
+        opacity: 0,
+
+    }, "=.4")
+    .from(".card4", {
+        yPercent: 100, left: "50%", top: "50%",
+        transformOrigin: "bottom center",
+        opacity: 0,
+
+    }, "=.5")
+    .from(".logoo", {
+        transformOrigin: "bottom center",
+        opacity: 0,
+
+    }, "=.5")
+    .from(".ract3", {
+        yPercent: 50, left: "50%", top: "50%",
+        transformOrigin: "top center",
+        opacity: 0,
+
+    }, "-=.1")
+    .from(".rct", {
+        yPercent: -50, left: "50%", top: "50%",
+        opacity: 0,
+        transformOrigin: 'top center',
+
+    }, "=.2").to(".whole-card", { y: 5, repeat: -1, yoyo: true })
 
 
-}
+// CURSOR
+var cursor = $(".cursor"),
+    follower = $(".cursor-follower");
 
-  
+var posX = 0,
+    posY = 0;
+
+var mouseX = 0,
+    mouseY = 0;
+
+TweenMax.to({}, 0.016, {
+    repeat: -1,
+    onRepeat: function () {
+        posX += (mouseX - posX) / 9;
+        posY += (mouseY - posY) / 9;
+
+        TweenMax.set(follower, {
+            css: {
+                left: posX - 12,
+                top: posY - 12
+            }
+        });
+
+        TweenMax.set(cursor, {
+            css: {
+                left: mouseX,
+                top: mouseY
+            }
+        });
+    }
+});
+
+$(document).on("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+// yellow circle
+$("a").on("mouseenter", function () {
+    cursor.addClass("active");
+    follower.addClass("active");
+});
+$("a").on("mouseleave", function () {
+    cursor.removeClass("active");
+    follower.removeClass("active");
+});
+
 function animateFrom(elem, direction) {
     direction = direction || 1;
     var x = 0,
