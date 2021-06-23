@@ -1,4 +1,37 @@
 
+var svgCircleProgress1 = document.getElementById("svgCircleProgress1");
+var svgCircleProgress1Path1 = document.getElementById("svgCircleProgressPath1");
+var tween, percentElement = false;
+
+TweenMax.set(svgCircleProgress1Path1, { drawSVG: 0 });
+
+function start() {
+    tween = TweenMax.fromTo(svgCircleProgressPath1, 2, {
+        drawSVG: "0"
+    }, {
+        drawSVG: '0 100%',
+        onUpdate: setPercentage,
+        onComplete: repeat
+    });
+}
+
+function setPercentage() {
+    if (!percentElement) {
+        percentElement = document.getElementById("percent");
+    }
+    var v = Math.round((tween.progress() * 100));
+    //v /= 10; // for use when you want 0.1 % use 1000 above if you do
+    percentElement.innerHTML = v; // + "%";
+    percentElement.style.opacity = tween.progress();
+}
+
+function repeat() {
+    // using setTimeout to give a bit of a delay before re-drawing the circle
+    setTimeout(start, 500);
+}
+
+start();
+
 gsap.timeline({}).to(".loading__overlay", {
     xPercent: -300,
     ease: "none",
