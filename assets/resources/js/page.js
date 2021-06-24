@@ -1,36 +1,22 @@
+var progressbar = $('.js-progress-bar-search');
 
-var svgCircleProgress1 = document.getElementById("svgCircleProgress1");
-var svgCircleProgress1Path1 = document.getElementById("svgCircleProgressPath1");
-var tween, percentElement = false;
-
-TweenMax.set(svgCircleProgress1Path1, { drawSVG: 0 });
-
-function start() {
-    tween = TweenMax.fromTo(svgCircleProgressPath1, 2, {
-        drawSVG: "0"
-    }, {
-        drawSVG: '0 100%',
-        onUpdate: setPercentage,
-        onComplete: repeat
-    });
-}
-
-function setPercentage() {
-    if (!percentElement) {
-        percentElement = document.getElementById("percent");
+var tween = new TweenLite(progressbar, 1, {
+    width: '100%',
+    ease: Linear.easeNone,
+    onUpdate: countPercent,
+    onComplete: function () { // progressbar completed
+        //progressbar.css({"width": "100%"});
+        progressbar.addClass("complete");
     }
-    var v = Math.round((tween.progress() * 100));
-    //v /= 10; // for use when you want 0.1 % use 1000 above if you do
-    percentElement.innerHTML = v; // + "%";
-    percentElement.style.opacity = tween.progress();
+});
+
+
+function countPercent() {
+    newPercent = (tween.progress() * 100).toFixed();
+
+    $('#count').text(newPercent + "%");
 }
 
-function repeat() {
-    // using setTimeout to give a bit of a delay before re-drawing the circle
-    setTimeout(start, 500);
-}
-
-start();
 
 gsap.timeline({}).to(".loading__overlay", {
     xPercent: -300,
@@ -60,60 +46,49 @@ gsap.timeline({}).to(".loading__overlay", {
     .from(".rect1", {
         xPercent: -50, left: "50%", top: "50%",
         opacity: 0,
-    }, "=.2")
+    }, "-=.2")
     .from(".rect-shd", {
         xPercent: -50, left: "50%", top: "50%",
         opacity: 0,
 
-    }, "=.3")
+    }, "-=.3")
     .from(".ract2", {
         yPercent: -100, left: "50%", top: "50%",
         transformOrigin: "top center",
         opacity: 0,
 
-    }, "-=.1")
+    }, "-=.4")
     .from(".card-bg", {
         delay: .1,
         yPercent: -100, left: "50%", top: "50%",
         transformOrigin: "top center",
         opacity: 0,
 
-    }, "-=.2")
-    .from(".card2", {
+    }, "-=.5")
+    .from(".card", {
         yPercent: 100, left: "50%", top: "50%",
         transformOrigin: "bottom center",
         opacity: 0,
 
-    }, "=.3")
-    .from(".card3", {
-        yPercent: 100, left: "50%", top: "50%",
-        transformOrigin: "bottom center",
-        opacity: 0,
-
-    }, "=.4")
-    .from(".card4", {
-        yPercent: 100, left: "50%", top: "50%",
-        transformOrigin: "bottom center",
-        opacity: 0,
-
-    }, "=.5")
+    }, "-=.6")
     .from(".logoo", {
         transformOrigin: "bottom center",
         opacity: 0,
 
-    }, "=.5")
+    }, "-=.5")
     .from(".ract3", {
         yPercent: 50, left: "50%", top: "50%",
         transformOrigin: "top center",
         opacity: 0,
 
-    }, "-=.1")
+    }, "-=.6")
     .from(".rct", {
         yPercent: -50, left: "50%", top: "50%",
         opacity: 0,
         transformOrigin: 'top center',
 
-    }, "=.2").to(".whole-card", { y: 5, repeat: -1, yoyo: true })
+    }, "=.1")
+// .to(".whole-card", { y: 7, repeat: -1, yoyo: true })
 
 
 // CURSOR

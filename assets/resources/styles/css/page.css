@@ -402,6 +402,51 @@
     text-shadow: -4px 0px 0px rgba(255, 255, 255, 0.6), 2px 0px 0px rgba(0, 0, 0, 0);
   }
 }
+.progress {
+  height: auto;
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.progress-rounded {
+  border-radius: 0px;
+  overflow: hidden;
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 7%;
+  font-size: 12px;
+  line-height: 0px;
+  color: #fff;
+  border-radius: 0;
+  padding: 2px 0px;
+  background-color: #1039ed;
+  box-shadow: none;
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.progress-bar p {
+  margin: 0 15px;
+}
+#count {
+  position: fixed;
+  font-size: 25px;
+  left: 48%;
+  top: 40%;
+  margin: 0 auto;
+}
+.progress-bar.complete {
+  background-color: #1039ed;
+}
+.progress-1 {
+  margin-bottom: 20px;
+}
+.progress-1 p {
+  line-height: 0;
+}
 .gs_reveal {
   opacity: 0;
   visibility: hidden;
@@ -1122,6 +1167,14 @@ header .enquire {
   position: relative;
   margin-top: 7%;
 }
+@media only screen and (min-width: 1600px) {
+  .hero-section .right-image svg {
+    width: 700px !important;
+  }
+  .hero-section .left-content {
+    padding-right: 14% !important;
+  }
+}
 .hero-section .el1 {
   background: url(/assets/resources/img/elemets-all.png) no-repeat -907px -54px;
   width: 41px;
@@ -1453,6 +1506,11 @@ header .enquire {
   height: 207px;
   background-size: cover;
   transform: translate(0px, -230px);
+}
+@media only screen and (min-width: 1600px) {
+  .our-solution #wave:before {
+    transform: translate(0px, -303px);
+  }
 }
 .solution {
   display: flex;
