@@ -350,7 +350,29 @@ height: 36px;
   height: 2px;
   transition: all 0.5s ease;
 }
-
+@media only screen and (max-width: 767px){
+.load__container {
+    height: 100vh;
+    background: #eaeaea;
+    transition: all .8s ease;
+}}
+.hover-switch > img:last-of-type {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+/* 
+ * Hide the last image on hover
+*/
+.hover-switch:hover > img:last-of-type {
+  opacity: 0;
+}
+.hover-switch > img {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+}
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;

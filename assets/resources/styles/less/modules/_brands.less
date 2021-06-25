@@ -35,8 +35,32 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 margin-top: 7%;
+.over-fl{
+    overflow: hidden;
+    height: 100px;
+}
 .brands-logo ul li img{
     width: 200px;
+}
+.flex-item .shw{
+    transform: translate(0px, -150px);
+    transform-origin: center center;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+.flex-item:hover .shw{
+    transform:translate(0px, -150px);
+    transform-origin: center center;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+.flex-item:hover .hid{
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.flex-item .hid{
+    opacity: 1;
+    transition: all 0.3s ease-in;
 }
 }
 @media @m_screen{

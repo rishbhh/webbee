@@ -697,6 +697,30 @@ h2 {
   height: 2px;
   transition: all 0.5s ease;
 }
+@media only screen and (max-width: 767px) {
+  .load__container {
+    height: 100vh;
+    background: #eaeaea;
+    transition: all 0.8s ease;
+  }
+}
+.hover-switch > img:last-of-type {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+/* 
+ * Hide the last image on hover
+*/
+.hover-switch:hover > img:last-of-type {
+  opacity: 0;
+}
+.hover-switch > img {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+}
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -729,7 +753,7 @@ body {
 .fixed {
   background: #fff;
   box-shadow: 1px 1px 12px #cedaffa6;
-  z-index: 1005;
+  z-index: 90;
 }
 header {
   padding: 13px 3%;
@@ -838,9 +862,11 @@ header .mega-menu .flex-mega .blue-card {
 header .mega-menu .flex-mega .blue-card ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 90px;
 }
 header .mega-menu .flex-mega .blue-card ul li {
-  margin-bottom: 40px ;
+  margin-bottom: 30px ;
+  display: block;
 }
 header .mega-menu .flex-mega .blue-card ul li a {
   font-size: 1rem;
@@ -864,8 +890,8 @@ header .mega-menu .flex-mega .blue-card ul li p {
   line-height: 17px;
 }
 header .mega-menu .flex-mega .blue-card .social {
-  position: relative;
-  bottom: -30px;
+  position: absolute;
+  bottom: 40px;
 }
 header .mega-menu .flex-mega .blue-card .social h5 {
   font-size: 12px;
@@ -918,6 +944,7 @@ header .mega-menu .flex-mega .right-menu ul {
 }
 header .mega-menu .flex-mega .right-menu ul li {
   padding: 6px 0;
+  display: block;
 }
 header .mega-menu .flex-mega .right-menu ul li a {
   color: #000;
@@ -928,6 +955,11 @@ header .mega-menu .flex-mega .right-menu ul li a {
 header .mega-menu .flex-mega .wight-40 {
   width: 55%;
   padding-left: 0;
+}
+header .mega-menu .flex-mega .equal {
+  width: 33% !important;
+}
+@media only screen and (min-width: 1600px) {
 }
 header .enquire {
   font-size: 15px;
@@ -1492,6 +1524,7 @@ header .enquire {
   padding: 5% 0;
   margin-top: 10%;
   overflow: hidden;
+  margin-bottom: 120px ;
 }
 .our-solution #wave {
   height: 70px;
@@ -2067,8 +2100,32 @@ header .enquire {
   flex-wrap: wrap;
   margin-top: 7%;
 }
+.brands .brands-logo .over-fl {
+  overflow: hidden;
+  height: 100px;
+}
 .brands .brands-logo .brands-logo ul li img {
   width: 200px;
+}
+.brands .brands-logo .flex-item .shw {
+  transform: translate(0px, -150px);
+  transform-origin: center center;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.brands .brands-logo .flex-item:hover .shw {
+  transform: translate(0px, -150px);
+  transform-origin: center center;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+.brands .brands-logo .flex-item:hover .hid {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.brands .brands-logo .flex-item .hid {
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
 @media only screen and (max-width: 767px) {
   .brands {
