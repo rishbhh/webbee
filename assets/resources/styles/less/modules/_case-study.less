@@ -141,9 +141,7 @@ left: 0;
     padding: 30px;
 }
 .case-card {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
     position: relative;
 }
 .card-description{
@@ -154,8 +152,20 @@ left: 0;
     padding: 1px 25px;
     bottom: -60px;
 }
+.box{
+    background: white;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+  }
+  
 .dots-container.static {
-    background-image: url(/assets/resources/img/dots-bg.png);
+    background-image: url(/assets/resources/img/dots-bg.svg);
+    // background-image: url(/assets/resources/img/back-sprite.svg#dot-view);
     background-position: 0 0;
     background-repeat: repeat;
     background-size:cover;
@@ -284,7 +294,7 @@ left: 0;
     padding:10% 0;
     position: relative;
     .dots-container.static {
-        background-image: url(/assets/resources/img/dots-bg.png);
+        background-image: url(/assets/resources/img/dots-bg.svg);
         background-position: 0 0;
         background-repeat: repeat;
         background-size: cover;

@@ -2151,10 +2151,6 @@ header .enquire {
   padding: 11% 0;
   position: relative;
 }
-.clients-slider .slick-prev,
-.clients-slider .slick-next {
-  display: none !important;
-}
 .clients-slider .elements .el12 {
   background: url('/assets/resources/img/elemets-all.png') no-repeat -1412px -59px;
   width: 36px;
@@ -2458,9 +2454,7 @@ button.slick-next.slick-arrow {
   padding: 30px;
 }
 .case-card {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
   position: relative;
 }
 .card-description {
@@ -2471,8 +2465,18 @@ button.slick-next.slick-arrow {
   padding: 1px 25px;
   bottom: -60px;
 }
+.box {
+  background: white;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
 .dots-container.static {
-  background-image: url(/assets/resources/img/dots-bg.png);
+  background-image: url(/assets/resources/img/dots-bg.svg);
   background-position: 0 0;
   background-repeat: repeat;
   background-size: cover;
@@ -2564,7 +2568,7 @@ button.slick-next.slick-arrow {
   position: relative;
 }
 .talk-section .dots-container.static {
-  background-image: url(/assets/resources/img/dots-bg.png);
+  background-image: url(/assets/resources/img/dots-bg.svg);
   background-position: 0 0;
   background-repeat: repeat;
   background-size: cover;

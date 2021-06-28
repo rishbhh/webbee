@@ -65,7 +65,7 @@ gsap.timeline({}).to(".loading__overlay", {
         opacity: 0,
 
     }, "-=.5")
-    .from(".card", {
+    .from(".card1", {
         yPercent: 100, left: "50%", top: "50%",
         transformOrigin: "bottom center",
         opacity: 0,
@@ -174,9 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ScrollTrigger.create({
             trigger: elem,
-            onEnter: function () { animateFrom(elem, -1) },
-            // onEnterBack: function () { animateFrom(elem, 1) },
-            // onLeave: function () { hide(elem) } // assure that the element is hidden when scrolled into view
+            once: true,
+            onEnter: function () { animateFrom(elem, 1) },
         });
     });
 });
@@ -246,6 +245,35 @@ $(document).ready(function () {
 
 
     });
+    let cas_e = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".cases-cards",
+
+        },
+    });
+    cas_e.from(".cass", { y: 40, opacity: 0, ease: "power2.easeOut", duration: 0.1, stagger: 0.5 }, "-=1.6")
+
+    cas_e.fromTo(".case-card", { yPercent: -100 }, { duration: 0.5, yPercent: 0 }, "-=.1")
+    cas_e.fromTo(".case-card img", { yPercent: 100 }, { duration: 0.5, yPercent: 0 }, "-=.1")
+    cas_e.from(".card-description", { scaleY: 0, transformOrigin: "bottom left" }, "-=.1")
+    let tal_k = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".cases-cards",
+            start: "bottom 50%",
+
+        },
+    });
+    tal_k.from(".talk-message-box", { y: 40, opacity: 0, ease: "power2.easeOut", duration: 1 }, "-=1")
+    tal_k.from(".message-icon", { scale: 0, opacity: 0, ease: "power2.easeOut", duration: 1 }, "-=1.2")
+
+    let blog_s = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".talk-section",
+            start: "bottom 10%",
+        }
+    });
+    blog_s.from(".blog-content", { yPercent: 100, opacity: 0, ease: "Power2.easeOut", duration: 0.7, stagger: 0.9 }, "-=.7")
+
 
     const scroll_elem = gsap.utils.toArray('.m_s_el');
     scroll_elem.forEach(s_elem => {
